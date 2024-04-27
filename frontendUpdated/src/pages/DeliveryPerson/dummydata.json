@@ -1,0 +1,85 @@
+{
+    "deliveryPersons": [
+      {
+        "id": 1,
+        "email": "ravi.kumar@example.com",
+        "password": "password123",
+        "name": "Ravi Kumar",
+        "phoneNumber": "9876543210",
+        "status": "busy"
+      },
+      {
+        "id": 2,
+        "email": "priya.patel@example.com",
+        "password": "password456",
+        "name": "Priya Patel",
+        "phoneNumber": "9876543211",
+        "status": "idle"
+      },
+      {
+        "id": 3,
+        "email": "suresh.sharma@example.com",
+        "password": "password789",
+        "name": "Suresh Sharma",
+        "phoneNumber": "9876543212",
+        "status": "busy"
+      },
+      {
+        "id": 4,
+        "email": "anjali.gupta@example.com",
+        "password": "password890",
+        "name": "Anjali Gupta",
+        "phoneNumber": "9876543213",
+        "status": "idle"
+      },
+      {
+        "id": 5,
+        "email": "deepak.singh@example.com",
+        "password": "password678",
+        "name": "Deepak Singh",
+        "phoneNumber": "9876543214",
+        "status": "busy"
+      },
+      {
+        "id": 6,
+        "email": "neha.mishra@example.com",
+        "password": "password345",
+        "name": "Neha Mishra",
+        "phoneNumber": "9876543215",
+        "status": "idle"
+      },
+      {
+        "id": 7,
+        "email": "amit.verma@example.com",
+        "password": "password234",
+        "name": "Amit Verma",
+        "phoneNumber": "9876543216",
+        "status": "busy"
+      },
+      {
+        "id": 8,
+        "email": "vijay.yadav@example.com",
+        "password": "password567",
+        "name": "Vijay Yadav",
+        "phoneNumber": "9876543217",
+        "status": "idle"
+      },
+      {
+        "id": 9,
+        "email": "pooja.jain@example.com",
+        "password": "password901",
+        "name": "Pooja Jain",
+        "phoneNumber": "9876543218",
+        "status": "busy"
+      },
+      {
+        "id": 10,
+        "email": "rajesh.kumar@example.com",
+        "password": "password012",
+        "name": "Rajesh Kumar",
+        "phoneNumber": "9876543219",
+        "status": "idle"
+      }
+    ]
+  }
+  

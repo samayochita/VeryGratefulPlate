@@ -1,0 +1,106 @@
+/* Donate Food Form Page Styles */
+.banner {
+    background-image: linear-gradient(rgba(1, 0, 5, 0.6), rgba(4, 1, 17, 0.6));
+  }
+  
+  .registration {
+    position: relative;
+    background-color: transparent;
+  }
+  
+  .registration::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(1, 0, 5, 0.6), rgba(4, 1, 17, 0.6));
+  }
+  
+  .register-form {
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 40px;
+    border-radius: 10px;
+    margin: 0 auto;
+  }
+  
+  .register-form h1 {
+    font-size: 36px;
+    color: rgb(1, 1, 1);
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .register-form p {
+    color: rgb(1, 1, 1);
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .register-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .register-form label {
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .register-form input[type="text"],
+  .register-form input[type="tel"],
+  .register-form input[type="number"],
+  .register-form input[type="datetime-local"],
+  .register-form textarea,
+  .register-form input[type="checkbox"] {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #444;
+    outline: none;
+    background-color: #ffffff;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    margin-bottom: 15px;
+    border-radius: 5px;
+  }
+  
+  .register-form input[type="radio"] {
+    margin-right: 10px;
+  }
+  
+  .register-form button.submitbtn {
+    display: inline-block;
+    background-color: #fc0050;
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: ease 0.3s;
+  }
+  
+  .register-form button.submitbtn:hover {
+    background-color: transparent;
+    border: 2px solid #fc0050;
+    transform: scale(1.05);
+  }
+  
+  .register-form .register-link {
+    text-align: center;
+    margin-top: 20px;
+    color: rgb(0, 0, 0);
+  }
+  
+  .register-form .register-link a {
+    color: Blue;
+    text-decoration: none;
+    transition: ease 0.3s;
+  }
+  
+  .register-form .register-link a:hover {
+    color: darkcyan;
+  }
+  
