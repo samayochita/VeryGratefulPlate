@@ -1,3 +1,93 @@
+GET http://localhost:9191/api/deliveryperson/5/pendingdonations
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Cookie: JSESSIONID=1A675B4046881892457A0CF4880BC7AB
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-05-01T221427.200.json
+
+###
+
+GET http://localhost:9191/api/deliveryperson/2/pendingdonations
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Cookie: JSESSIONID=1A675B4046881892457A0CF4880BC7AB
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-05-01T221418.200.json
+
+###
+
+GET http://localhost:9191/api/deliveryperson/4/pendingdonations
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Cookie: JSESSIONID=1A675B4046881892457A0CF4880BC7AB
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-05-01T221359.200.json
+
+###
+
+GET http://localhost:9191/api/deliveryperson/1/pendingdonations
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Cookie: JSESSIONID=1A675B4046881892457A0CF4880BC7AB
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-05-01T221146.200.json
+
+###
+
+GET http://localhost:9191/api/deliveryperson/1/pendingdonations
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Cookie: JSESSIONID=1A675B4046881892457A0CF4880BC7AB
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-05-01T220847.404.json
+
+###
+
+GET http://localhost:9191/api/deliverypersons/1/pendingdonations
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Cookie: JSESSIONID=1A675B4046881892457A0CF4880BC7AB
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-05-01T220821.404.json
+
+###
+
+GET http://localhost:9191/api/deliverypersons/1/pendingdonations
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Cookie: JSESSIONID=1A675B4046881892457A0CF4880BC7AB
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-05-01T220811.404.json
+
+###
+
+GET http://localhost:9191/api/deliverypersons/1/pendingdonations
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Cookie: JSESSIONID=1A675B4046881892457A0CF4880BC7AB
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-05-01T220753.404.json
+
+###
+
+GET http://localhost:9191/api/donations/userdonations?userId=6&userType=ADMIN
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Cookie: JSESSIONID=1A675B4046881892457A0CF4880BC7AB
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-05-01T212543.200.json
+
+###
+
 GET http://localhost:9191/api/donations/userdonations?userId=3&userType=USER
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
@@ -594,258 +684,6 @@ Accept-Encoding: br,deflate,gzip,x-gzip
 }
 
 <> 2024-04-27T231808.500.json
-
-###
-
-POST http://localhost:9191/api/deliverypersons/register
-Content-Type: application/json
-Content-Length: 135
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Cookie: JSESSIONID=DFDD5BC27C8A6D0937966852447A45DD
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "emailId": "mohan@gmail.com",
-  "password": "mohan",
-  "name": "mohan",
-  "phoneNumber": "9844467394",
-  "status": "ON_DUTY_FREE"
-}
-
-<> 2024-04-27T230958.200.json
-
-###
-
-POST http://localhost:9191/api/donations/add
-Content-Type: application/json
-Content-Length: 333
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Cookie: JSESSIONID=DFDD5BC27C8A6D0937966852447A45DD
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "user": {
-  "userId": 1
-   },
-  "additionalNotes": "None",
-  "category": "Veg",
-  "deliveryPerson": {
-    "id": 3
-  },
-  "donationStatus": "picked-up",
-  "donorName": "Pracheti",
-  "donorPhoneNumber": "7832341235",
-  "foodPreparationDateTime": "2024-04-24T18:00:00",
-  "pickupAddress": "123 Jump Street",
-  "quantityInKg": 2.5
-
-}
-
-<> 2024-04-27T230207.500.json
-
-###
-
-POST http://localhost:9191/api/donations/add
-Content-Type: application/json
-Content-Length: 333
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Cookie: JSESSIONID=DFDD5BC27C8A6D0937966852447A45DD
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "user": {
-  "userId": 1
-   },
-  "additionalNotes": "None",
-  "category": "Veg",
-  "deliveryPerson": {
-    "id": 3
-  },
-  "donationStatus": "picked-up",
-  "donorName": "Pracheti",
-  "donorPhoneNumber": "7832341235",
-  "foodPreparationDateTime": "2024-04-24T18:00:00",
-  "pickupAddress": "123 Jump Street",
-  "quantityInKg": 2.5
-
-}
-
-<> 2024-04-27T230149.500.json
-
-###
-
-POST http://localhost:9191/api/donations/add
-Content-Type: application/json
-Content-Length: 333
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Cookie: JSESSIONID=DFDD5BC27C8A6D0937966852447A45DD
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "user": {
-  "userId": 1
-   },
-  "additionalNotes": "None",
-  "category": "Veg",
-  "deliveryPerson": {
-    "id": 3
-  },
-  "donationStatus": "picked-up",
-  "donorName": "Pracheti",
-  "donorPhoneNumber": "7832341235",
-  "foodPreparationDateTime": "2024-04-24T18:00:00",
-  "pickupAddress": "123 Jump Street",
-  "quantityInKg": 2.5
-
-}
-
-<> 2024-04-27T230140.500.json
-
-###
-
-POST http://localhost:9191/api/donations/add
-Content-Type: application/json
-Content-Length: 333
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Cookie: JSESSIONID=DFDD5BC27C8A6D0937966852447A45DD
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "user": {
-  "userId": 1
-   },
-  "additionalNotes": "None",
-  "category": "Veg",
-  "deliveryPerson": {
-    "id": 2
-  },
-  "donationStatus": "picked-up",
-  "donorName": "Pracheti",
-  "donorPhoneNumber": "7832341235",
-  "foodPreparationDateTime": "2024-04-24T18:00:00",
-  "pickupAddress": "123 Jump Street",
-  "quantityInKg": 2.5
-
-}
-
-<> 2024-04-27T230134.500.json
-
-###
-
-POST http://localhost:9191/api/donations/add
-Content-Type: application/json
-Content-Length: 333
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Cookie: JSESSIONID=DFDD5BC27C8A6D0937966852447A45DD
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "user": {
-  "userId": 1
-   },
-  "additionalNotes": "None",
-  "category": "Veg",
-  "deliveryPerson": {
-    "id": 1
-  },
-  "donationStatus": "picked-up",
-  "donorName": "Pracheti",
-  "donorPhoneNumber": "7832341235",
-  "foodPreparationDateTime": "2024-04-24T18:00:00",
-  "pickupAddress": "123 Jump Street",
-  "quantityInKg": 2.5
-
-}
-
-<> 2024-04-27T230114.500.json
-
-###
-
-POST http://localhost:9191/api/donations/add
-Content-Type: application/json
-Content-Length: 391
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Cookie: JSESSIONID=DFDD5BC27C8A6D0937966852447A45DD
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "user": {
-    "user_id": "3"
-  },
-  "deliveryPerson": {
-    "id": 3
-  },
-  "additionalNotes": "none",
-  "category": "Veg",
-  "donationStatus": "picked-up",
-  "donorName": "Pracheti",
-  "donorPhoneNumber": "7397668567",
-  "foodPreparationDateTime": "2024-04-26T22:35",
-  "pickupAddress": "B231 2nd floor, Silicon Valley, Neeladri Rd, opposite CONCORDE MANHATTANS",
-  "quantityInKg": 3
-
-
-}
-
-<> 2024-04-27T224657.500.json
-
-###
-
-POST http://localhost:9191/api/deliverypersons/register
-Content-Type: application/json
-Content-Length: 135
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Cookie: JSESSIONID=DFDD5BC27C8A6D0937966852447A45DD
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "emailId": "rohan@gmail.com",
-  "password": "rohan",
-  "name": "rohan",
-  "phoneNumber": "9845467394",
-  "status": "ON_DUTY_FREE"
-}
-
-<> 2024-04-27T224642.200.json
-
-###
-
-POST http://localhost:9191/api/donations/add
-Content-Type: application/json
-Content-Length: 391
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Cookie: JSESSIONID=DFDD5BC27C8A6D0937966852447A45DD
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "user": {
-    "user_id": "3"
-  },
-  "deliveryPerson": {
-    "id": 2
-  },
-  "additionalNotes": "none",
-  "category": "Veg",
-  "donationStatus": "picked-up",
-  "donorName": "Pracheti",
-  "donorPhoneNumber": "7397668567",
-  "foodPreparationDateTime": "2024-04-26T22:35",
-  "pickupAddress": "B231 2nd floor, Silicon Valley, Neeladri Rd, opposite CONCORDE MANHATTANS",
-  "quantityInKg": 3
-
-
-}
-
-<> 2024-04-27T224406.500.json
 
 ###
 

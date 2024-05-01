@@ -1,6 +1,7 @@
 package com.example.demo.controllers;
 import com.example.demo.model.DeliveryPerson;
 import com.example.demo.model.DeliveryPersonStatus;
+import com.example.demo.model.Donation;
 import com.example.demo.service.DeliveryPersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -11,8 +12,10 @@ import org.springframework.web.bind.annotation.*;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
+import java.util.List;
+
 @RestController
-@RequestMapping("/api/deliverypersons")
+@RequestMapping("/api/deliveryperson")
 public class DeliveryPersonController {
 
     private final DeliveryPersonService deliveryPersonService;
@@ -62,6 +65,15 @@ public class DeliveryPersonController {
             return ResponseEntity.ok("Logout successful");
         } catch (Exception ex) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Logout failed");
+        }
+    }
+    @GetMapping("/{deliveryPersonId}/pendingdonations")
+    public ResponseEntity<List<Donation>> getPendingDonationsForDeliveryPerson(@PathVariable("deliveryPersonId") Long deliveryPersonId) {
+        List<Donation> pendingDonations = deliveryPersonService.getPendingDonationsForDeliveryPerson(deliveryPersonId);
+        if (pendingDonations != null) {
+            return ResponseEntity.ok(pendingDonations);
+        } else {
+            return ResponseEntity.notFound().build();
         }
     }
 }
