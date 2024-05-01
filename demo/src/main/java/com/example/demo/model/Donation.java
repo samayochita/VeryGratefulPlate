@@ -15,7 +15,7 @@ public class Donation{
     @JoinColumn(name = "user_id",referencedColumnName = "user_id", nullable = false) // Change to reference the id column
     private User user;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "delivery_person_id")
     private DeliveryPerson deliveryPerson;
 
@@ -49,6 +49,14 @@ public class Donation{
 
     public DeliveryPerson getDeliveryPerson() {
         return deliveryPerson;
+    }
+
+    public Integer getUserId() {
+        if (user != null) {
+            return user.getUserId();
+        } else {
+            return null; // or handle the case where user is null
+        }
     }
 
     public Donation() {

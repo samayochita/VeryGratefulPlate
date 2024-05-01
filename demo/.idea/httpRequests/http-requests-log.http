@@ -1,3 +1,365 @@
+GET http://localhost:9191/api/donations/userdonations?userId=3&userType=USER
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Cookie: JSESSIONID=1A675B4046881892457A0CF4880BC7AB
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-05-01T211628.200.json
+
+###
+
+GET http://localhost:9191/api/donations/userdonations?userId=3&userType=USER
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Cookie: JSESSIONID=1A675B4046881892457A0CF4880BC7AB
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-05-01T211250.500.json
+
+###
+
+GET http://localhost:9191/api/donations/userdonations?userId=1&userType=USER
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Cookie: JSESSIONID=1A675B4046881892457A0CF4880BC7AB
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-05-01T210339.500.json
+
+###
+
+GET http://localhost:9191/api/donations/userdonations?userId=1&userType=USER
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Cookie: JSESSIONID=1A675B4046881892457A0CF4880BC7AB
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-05-01T210335.500.json
+
+###
+
+GET http://localhost:9191/api/donations/userdonations?userId=1&userType=USER
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Cookie: JSESSIONID=1A675B4046881892457A0CF4880BC7AB
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-05-01T210328.500.json
+
+###
+
+GET http://localhost:9191/api/donations/userdonations?userId=1&userType=USER
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Cookie: JSESSIONID=1A675B4046881892457A0CF4880BC7AB
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-05-01T210321.500.json
+
+###
+
+GET http://localhost:9191/api/donations/userdonations?userId=1&userType=USER
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Cookie: JSESSIONID=1A675B4046881892457A0CF4880BC7AB
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-05-01T205650.400.json
+
+###
+
+GET http://localhost:9191/api/donations/userdonations?userId=1&userType=USER
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Cookie: JSESSIONID=1A675B4046881892457A0CF4880BC7AB
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-05-01T205517.400.json
+
+###
+
+GET http://localhost:9191/api/donations/userdonations?userId=1&userType=USER
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Cookie: JSESSIONID=1A675B4046881892457A0CF4880BC7AB
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-05-01T204833.400.json
+
+###
+
+GET http://localhost:9191/api/donations/userdonations?userId=1&userType=USER
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Cookie: JSESSIONID=1A675B4046881892457A0CF4880BC7AB
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-05-01T204432.500.json
+
+###
+
+GET http://localhost:9191/api/donations/userdonations?userId=1&userType=USER
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Cookie: JSESSIONID=1A675B4046881892457A0CF4880BC7AB
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-05-01T204333.500.json
+
+###
+
+GET http://localhost:9191/api/donations/userdonations?userId=1&userType=USER
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Cookie: JSESSIONID=1A675B4046881892457A0CF4880BC7AB
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-05-01T204332.500.json
+
+###
+
+GET http://localhost:9191/api/donations/userdonations?userId=1&userType=USER
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Cookie: JSESSIONID=1A675B4046881892457A0CF4880BC7AB
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-05-01T204331.500.json
+
+###
+
+GET http://localhost:9191/api/donations/userdonations?userId=3&userType=USER
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Cookie: JSESSIONID=1A675B4046881892457A0CF4880BC7AB
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-05-01T204254.500.json
+
+###
+
+GET http://localhost:9191/api/donations/user-donations?userId=3&userType=USER
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Cookie: JSESSIONID=1A675B4046881892457A0CF4880BC7AB
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-05-01T204227.500.json
+
+###
+
+GET http://localhost:9191/api/donations?userId=3&userType=USER
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Cookie: JSESSIONID=1A675B4046881892457A0CF4880BC7AB
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-05-01T203811.500.json
+
+###
+
+GET http://localhost:9191/api/donations?userId=3&userType=USER
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Cookie: JSESSIONID=1A675B4046881892457A0CF4880BC7AB
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-05-01T203803.500.json
+
+###
+
+GET http://localhost:9191/api/donations?userId=1&userType=USER
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Cookie: JSESSIONID=1A675B4046881892457A0CF4880BC7AB
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-05-01T203432.500.json
+
+###
+
+GET http://localhost:9191/api/donations?userId=1&userType=USER
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Cookie: JSESSIONID=1A675B4046881892457A0CF4880BC7AB
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-05-01T203231.500.json
+
+###
+
+PUT http://localhost:9191/api/donations/1/delivered
+Content-Type: application/json
+Content-Length: 35
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Cookie: JSESSIONID=1A675B4046881892457A0CF4880BC7AB
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "donationStatus": "delivered"
+}
+
+<> 2024-05-01T203144.200.txt
+
+###
+
+PUT http://localhost:9191/api/donations/1/pickedup
+Content-Type: application/json
+Content-Length: 35
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Cookie: JSESSIONID=1A675B4046881892457A0CF4880BC7AB
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "donationStatus": "picked up"
+}
+
+<> 2024-05-01T203011.200.txt
+
+###
+
+PUT http://localhost:9191/api/donations/1/pickedup
+Content-Type: application/json
+Content-Length: 35
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Cookie: JSESSIONID=1A675B4046881892457A0CF4880BC7AB
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "donationStatus": "picked up"
+}
+
+<> 2024-05-01T202953.404.json
+
+###
+
+PUT http://localhost:9191/api/donations/1/pickedup
+Content-Type: application/json
+Content-Length: 35
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Cookie: JSESSIONID=1A675B4046881892457A0CF4880BC7AB
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "donationStatus": "picked up"
+}
+
+<> 2024-05-01T202936.404.json
+
+###
+
+GET http://localhost:9191/api/donations?userId=1&userType=USER
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Cookie: JSESSIONID=1A675B4046881892457A0CF4880BC7AB
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-05-01T202607.404.json
+
+###
+
+PUT http://localhost:9191/api/donations/1/pickedup
+Content-Type: application/json
+Content-Length: 35
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Cookie: JSESSIONID=1A675B4046881892457A0CF4880BC7AB
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "donationStatus": "picked up"
+}
+
+<> 2024-05-01T192714.404.json
+
+###
+
+PUT http://localhost:9191/api/donations/1/pickedup
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 24
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Cookie: JSESSIONID=1A675B4046881892457A0CF4880BC7AB
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+%7B%0A%22donation%0A%7D=
+
+<> 2024-05-01T192625.404.json
+
+###
+
+PUT http://localhost:9191/api/donations/1/pickedup
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Cookie: JSESSIONID=1A675B4046881892457A0CF4880BC7AB
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-05-01T192410.404.json
+
+###
+
+PUT http://localhost:9191/api/donations/2/delivered
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Cookie: JSESSIONID=1A675B4046881892457A0CF4880BC7AB
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-05-01T192319.400.txt
+
+###
+
+PUT http://localhost:9191/api/donations/1/delivered
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Cookie: JSESSIONID=1A675B4046881892457A0CF4880BC7AB
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-05-01T192312.400.txt
+
+###
+
+GET http://localhost:9191/api/donations?userId=1&userType=USER
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Cookie: JSESSIONID=1A675B4046881892457A0CF4880BC7AB
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-05-01T192241.404.json
+
+###
+
+GET http://localhost:9191/api/donations?userId=1&userType=USER
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Cookie: JSESSIONID=1A675B4046881892457A0CF4880BC7AB
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-05-01T192226.404.json
+
+###
+
+POST http://localhost:9191/api/deliverypersons/logout
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Cookie: JSESSIONID=DFDD5BC27C8A6D0937966852447A45DD
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-05-01T181717.200.txt
+
+###
+
 POST http://localhost:9191/api/deliverypersons/login
 Content-Type: application/json
 Content-Length: 57
@@ -484,699 +846,6 @@ Accept-Encoding: br,deflate,gzip,x-gzip
 }
 
 <> 2024-04-27T224406.500.json
-
-###
-
-POST http://localhost:9191/api/donations/add
-Content-Type: application/json
-Content-Length: 393
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Cookie: JSESSIONID=DFDD5BC27C8A6D0937966852447A45DD
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "user": {
-    "user_id": "3"
-  },
-  "deliveryPerson": {
-    "id": 2
-  },
-  "additionalNotes": "none",
-  "category": "Veg",
-  "donationStatus": "picked up",
-  "donorName": "Pracheti",
-  "donorPhoneNumber": "7397668567",
-  "foodPreparationDateTime": "2024-04-26T22:35",
-  "pickupAddress": "B231 2nd floor, Silicon Valley, Neeladri Rd, opposite CONCORDE MANHATTANS",
-  "quantityInKg": 3
-
-
-}
-
-<> 2024-04-27T224347.500.json
-
-###
-
-POST http://localhost:9191/api/donations/add
-Content-Type: application/json
-Content-Length: 390
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Cookie: JSESSIONID=DFDD5BC27C8A6D0937966852447A45DD
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "deliveryPerson": {
-    "id": 2
-  },
-  "additionalNotes": "none",
-  "category": "Veg",
-  "donationStatus": "picked up",
-  "donorName": "Pracheti",
-  "donorPhoneNumber": "7397668567",
-  "foodPreparationDateTime": "2024-04-26T22:35",
-  "pickupAddress": "B231 2nd floor, Silicon Valley, Neeladri Rd, opposite CONCORDE MANHATTANS",
-  "quantityInKg": 3,
-  "user": {
-    "user_id": "3"
-  }
-
-}
-
-<> 2024-04-27T224328.500.json
-
-###
-
-POST http://localhost:9191/api/deliverypersons/register
-Content-Type: application/json
-Content-Length: 135
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Cookie: JSESSIONID=DFDD5BC27C8A6D0937966852447A45DD
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "emailId": "lohit@gmail.com",
-  "password": "lohit",
-  "name": "lohit",
-  "phoneNumber": "7345467394",
-  "status": "ON_DUTY_FREE"
-}
-
-<> 2024-04-27T224321.200.json
-
-###
-
-POST http://localhost:9191/api/donations/add
-Content-Type: application/json
-Content-Length: 390
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Cookie: JSESSIONID=DFDD5BC27C8A6D0937966852447A45DD
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "deliveryPerson": {
-    "id": 2
-  },
-  "additionalNotes": "none",
-  "category": "Veg",
-  "donationStatus": "picked up",
-  "donorName": "Pracheti",
-  "donorPhoneNumber": "7397668567",
-  "foodPreparationDateTime": "2024-04-26T22:35",
-  "pickupAddress": "B231 2nd floor, Silicon Valley, Neeladri Rd, opposite CONCORDE MANHATTANS",
-  "quantityInKg": 3,
-  "user": {
-    "user_id": "3"
-  }
-
-}
-
-<> 2024-04-27T224304.500.json
-
-###
-
-POST http://localhost:9191/api/donations/add
-Content-Type: application/json
-Content-Length: 356
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Cookie: JSESSIONID=DFDD5BC27C8A6D0937966852447A45DD
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-
-  "additionalNotes": "none",
-  "category": "Veg",
-  "donationStatus": "picked up",
-  "donorName": "Pracheti",
-  "donorPhoneNumber": "7397668567",
-  "foodPreparationDateTime": "2024-04-26T22:35",
-  "pickupAddress": "B231 2nd floor, Silicon Valley, Neeladri Rd, opposite CONCORDE MANHATTANS",
-  "quantityInKg": 3,
-  "user": {
-    "user_id": "3"
-  }
-
-}
-
-<> 2024-04-27T224249.500.json
-
-###
-
-POST http://localhost:9191/api/donations/add
-Content-Type: application/json
-Content-Length: 332
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Cookie: JSESSIONID=DFDD5BC27C8A6D0937966852447A45DD
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "additionalNotes": "none",
-  "category": "Veg",
-  "donationStatus": "picked up",
-  "donorName": "Pracheti",
-  "donorPhoneNumber": "7397668567",
-  "foodPreparationDateTime": "2024-04-26T22:35",
-  "pickupAddress": "B231 2nd floor, Silicon Valley, Neeladri Rd, opposite CONCORDE MANHATTANS",
-  "quantityInKg": 3,
-  "user_id": "3"
-}
-
-<> 2024-04-27T224223.500.json
-
-###
-
-POST http://localhost:9191/api/donations/add
-Content-Type: application/json
-Content-Length: 335
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Cookie: JSESSIONID=DFDD5BC27C8A6D0937966852447A45DD
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "user": {
-  "userId": 1
-   },
-  "additionalNotes": "None",
-  "category": "Veg",
-  "deliveryPerson": {
-    "id": 1
-  },
-  "donationStatus": "picked-up",
-  "donorName": "Pracheti",
-  "donorPhoneNumber": "7832341235",
-  "foodPreparationDateTime": "2024-04-24T18:00:00",
-  "pickupAddress": "123 Jump Street",
-  "quantityInKg": 2.5
-
-}
-
-<> 2024-04-27T222812.200.json
-
-###
-
-POST http://localhost:9191/api/deliverypersons/register
-Content-Type: application/json
-Content-Length: 135
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Cookie: JSESSIONID=DFDD5BC27C8A6D0937966852447A45DD
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "emailId": "rohit@gmail.com",
-  "password": "rohit",
-  "name": "rohit",
-  "phoneNumber": "7385467394",
-  "status": "ON_DUTY_FREE"
-}
-
-<> 2024-04-27T215948.200.json
-
-###
-
-POST http://localhost:9191/api/deliverypersons/register
-Content-Type: application/json
-Content-Length: 135
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Cookie: JSESSIONID=DFDD5BC27C8A6D0937966852447A45DD
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "emailId": "rohit@gmail.com",
-  "password": "rohit",
-  "name": "rohit",
-  "phoneNumber": "7385467394",
-  "status": "ON_DUTY_FREE"
-}
-
-<> 2024-04-27T215408.200.json
-
-###
-
-POST http://localhost:9191/api/deliverypersons/register
-Content-Type: application/json
-Content-Length: 135
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Cookie: JSESSIONID=DFDD5BC27C8A6D0937966852447A45DD
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "emailId": "rohit@gmail.com",
-  "password": "rohit",
-  "name": "rohit",
-  "phoneNumber": "7385467394",
-  "status": "ON_DUTY_FREE"
-}
-
-<> 2024-04-27T215357.200.json
-
-###
-
-POST http://localhost:9191/api/deliverypersons/register
-Content-Type: application/json
-Content-Length: 135
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Cookie: JSESSIONID=DFDD5BC27C8A6D0937966852447A45DD
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "emailId": "rohit@gmail.com",
-  "password": "rohit",
-  "name": "rohit",
-  "phoneNumber": "7385467394",
-  "status": "ON_DUTY_FREE"
-}
-
-<> 2024-04-27T204813.200.json
-
-###
-
-POST http://localhost:9191/api/deliverypersons/register
-Content-Type: application/json
-Content-Length: 135
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Cookie: JSESSIONID=DFDD5BC27C8A6D0937966852447A45DD
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "emailId": "rohit@gmail.com",
-  "password": "rohit",
-  "name": "rohit",
-  "phoneNumber": "7385467394",
-  "status": "ON_DUTY_FREE"
-}
-
-<> 2024-04-27T204759.200.json
-
-###
-
-POST http://localhost:9191/api/deliverypersons/register
-Content-Type: application/json
-Content-Length: 135
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Cookie: JSESSIONID=DFDD5BC27C8A6D0937966852447A45DD
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "emailId": "rohit@gmail.com",
-  "password": "rohit",
-  "name": "rohit",
-  "phoneNumber": "7385467394",
-  "status": "ON_DUTY_FREE"
-}
-
-<> 2024-04-27T204558.200.json
-
-###
-
-POST http://localhost:9191/api/deliverypersons/register
-Content-Type: application/json
-Content-Length: 135
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Cookie: JSESSIONID=DFDD5BC27C8A6D0937966852447A45DD
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "emailId": "rohit@gmail.com",
-  "password": "rohit",
-  "name": "rohit",
-  "phoneNumber": "7385467394",
-  "status": "ON_DUTY_FREE"
-}
-
-<> 2024-04-27T204554.200.json
-
-###
-
-POST http://localhost:9191/api/deliverypersons/register
-Content-Type: application/json
-Content-Length: 135
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Cookie: JSESSIONID=DFDD5BC27C8A6D0937966852447A45DD
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "emailId": "rohit@gmail.com",
-  "password": "rohit",
-  "name": "rohit",
-  "phoneNumber": "7385467394",
-  "status": "ON_DUTY_FREE"
-}
-
-<> 2024-04-27T204345.404.json
-
-###
-
-POST http://localhost:9191/api/deliverypersons/register
-Content-Type: application/json
-Content-Length: 135
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Cookie: JSESSIONID=DFDD5BC27C8A6D0937966852447A45DD
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "emailId": "rohit@gmail.com",
-  "password": "rohit",
-  "name": "rohit",
-  "phoneNumber": "7385467394",
-  "status": "ON_DUTY_FREE"
-}
-
-<> 2024-04-27T204154.404.json
-
-###
-
-POST http://localhost:9191/api/deliverypersons/register
-Content-Type: application/json
-Content-Length: 135
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Cookie: JSESSIONID=DFDD5BC27C8A6D0937966852447A45DD
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "emailId": "rohit@gmail.com",
-  "password": "rohit",
-  "name": "rohit",
-  "phoneNumber": "7385467394",
-  "status": "ON_DUTY_FREE"
-}
-
-<> 2024-04-27T204152.404.json
-
-###
-
-POST http://localhost:9191/api/deliverypersons/register
-Content-Type: application/json
-Content-Length: 135
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Cookie: JSESSIONID=DFDD5BC27C8A6D0937966852447A45DD
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "emailId": "rohit@gmail.com",
-  "password": "rohit",
-  "name": "rohit",
-  "phoneNumber": "7385467394",
-  "status": "ON_DUTY_FREE"
-}
-
-<> 2024-04-27T204058.404.json
-
-###
-
-POST http://localhost:9191/api/deliverypersons/register
-Content-Type: application/json
-Content-Length: 135
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Cookie: JSESSIONID=DFDD5BC27C8A6D0937966852447A45DD
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "emailId": "rohit@gmail.com",
-  "password": "rohit",
-  "name": "rohit",
-  "phoneNumber": "7385467394",
-  "status": "ON_DUTY_FREE"
-}
-
-<> 2024-04-27T204023.404.json
-
-###
-
-POST http://localhost:9191/api/delivery-persons/register
-Content-Type: application/json
-Content-Length: 135
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Cookie: JSESSIONID=DFDD5BC27C8A6D0937966852447A45DD
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "emailId": "rohit@gmail.com",
-  "password": "rohit",
-  "name": "rohit",
-  "phoneNumber": "7385467394",
-  "status": "ON_DUTY_FREE"
-}
-
-<> 2024-04-27T203833.404.json
-
-###
-
-POST http://localhost:9191/api/delivery-persons/register
-Content-Type: application/json
-Content-Length: 136
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Cookie: JSESSIONID=DFDD5BC27C8A6D0937966852447A45DD
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "emailId": "roshit@gmail.com",
-  "password": "rohit",
-  "name": "rohit",
-  "phoneNumber": "7385467394",
-  "status": "ON_DUTY_FREE"
-}
-
-<> 2024-04-27T203818.404.json
-
-###
-
-POST http://localhost:9191/api/donations/add
-Content-Type: application/json
-Content-Length: 292
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Cookie: JSESSIONID=DFDD5BC27C8A6D0937966852447A45DD
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "user": {
-    "userId": 1
-  },
-  "donorName": "Meera Nair",
-  "donorPhoneNumber": "7422369453",
-  "pickupAddress": "123 Main Street",
-  "category": "Veg",
-  "quantityInKg": 2.0,
-  "foodPreparationDateTime": "2024-04-24T18:00:00",
-  "additionalNotes": null,
-  "donationStatus": "pending"
-}
-
-<> 2024-04-27T181244.500.json
-
-###
-
-POST http://localhost:9191/api/donations/add
-Content-Type: application/json
-Content-Length: 309
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Cookie: JSESSIONID=DFDD5BC27C8A6D0937966852447A45DD
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "user": {
-    "emailId": "meera@gmail.com"
-  },
-  "donorName": "Meera Nair",
-  "donorPhoneNumber": "7422369453",
-  "pickupAddress": "123 Main Street",
-  "category": "Veg",
-  "quantityInKg": 2.0,
-  "foodPreparationDateTime": "2024-04-24T18:00:00",
-  "additionalNotes": null,
-  "donationStatus": "pending"
-}
-
-<> 2024-04-27T181219.500.json
-
-###
-
-POST http://localhost:9191/api/users/register
-Content-Type: application/json
-Content-Length: 100
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Cookie: JSESSIONID=DFDD5BC27C8A6D0937966852447A45DD
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "emailId": "asmita@gmail.com",
-  "password": "asmita",
-  "userType": "USER",
-  "address": null
-}
-
-<> 2024-04-27T155042.201.txt
-
-###
-
-POST http://localhost:9191/api/users/register
-Content-Type: application/json
-Content-Length: 100
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Cookie: JSESSIONID=DFDD5BC27C8A6D0937966852447A45DD
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "emailId": "pavani@gmail.com",
-  "password": "pavani",
-  "userType": "USER",
-  "address": null
-}
-
-<> 2024-04-27T155031.409.txt
-
-###
-
-POST http://localhost:9191/api/users/register
-Content-Type: application/json
-Content-Length: 100
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Cookie: JSESSIONID=DFDD5BC27C8A6D0937966852447A45DD
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "emailId": "pavani@gmail.com",
-  "password": "pavani",
-  "userType": "USER",
-  "address": null
-}
-
-<> 2024-04-27T154158.201.txt
-
-###
-
-POST http://localhost:9191/api/users/register
-Content-Type: application/json
-Content-Length: 101
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Cookie: JSESSIONID=DFDD5BC27C8A6D0937966852447A45DD
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "emailId": "riya@gmail.com",
-  "password": "joshiriya",
-  "userType": "USER",
-  "address": null
-}
-
-<> 2024-04-27T115519.409.txt
-
-###
-
-POST http://localhost:9191/api/users/login
-Content-Type: application/json
-Content-Length: 82
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Cookie: JSESSIONID=DFDD5BC27C8A6D0937966852447A45DD
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "emailId": "meera@gmail.com",
-  "password": "babu@123",
-  "userType": "USER"
-}
-
-<> 2024-04-27T115505.200.txt
-
-###
-
-POST http://localhost:9191/api/users/register
-Content-Type: application/json
-Content-Length: 82
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Cookie: JSESSIONID=DFDD5BC27C8A6D0937966852447A45DD
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "emailId": "riya@gmail.com",
-  "password": "joshiriya",
-  "userType": "USER"
-}
-
-<> 2024-04-27T111358.201.txt
-
-###
-
-POST http://localhost:9191/api/users/register
-Content-Type: application/json
-Content-Length: 87
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Cookie: JSESSIONID=DFDD5BC27C8A6D0937966852447A45DD
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "emailId": "joshiriya@gmail.com",
-  "password": "joshiriya",
-  "userType": "USER"
-}
-
-<> 2024-04-27T111351.409.txt
-
-###
-
-POST http://localhost:9191/api/users/register
-Content-Type: application/json
-Content-Length: 87
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Cookie: JSESSIONID=DFDD5BC27C8A6D0937966852447A45DD
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "emailId": "joshiriya@gmail.com",
-  "password": "joshiriya",
-  "userType": "USER"
-}
-
-<> 2024-04-27T111348.201.txt
-
-###
-
-POST http://localhost:9191/resetpassword
-Content-Type: application/json
-Content-Length: 148
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Cookie: JSESSIONID=DFDD5BC27C8A6D0937966852447A45DD
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "token": "a4006363-1f3f-4218-b152-7e6966a93aaa",
-  "user": {
-    "emailId" : "samayochitabroski@gmail.com"
-  },
-  "newPassword": "samayochita"
-}
-
-<> 2024-04-26T175039.200.txt
 
 ###
 

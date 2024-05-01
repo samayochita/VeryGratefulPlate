@@ -10,7 +10,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class DonationService {
@@ -41,7 +43,7 @@ public class DonationService {
         }
 
         donation.setDeliveryPerson(deliveryPerson);
-        donation.setDonationStatus("picked-up");
+        donation.setDonationStatus("pending");
         donationRepository.save(donation);
 
         // Update delivery person status
@@ -71,5 +73,24 @@ public class DonationService {
         logger.info("Fetching donation with ID: " + donationId);
 
         return donationRepository.findById(donationId).orElse(null);
+    }
+    // Method to get donations by user ID
+    public List<Donation> getDonationsByUserId(int userId) {
+        // Fetch all donations from the repository
+        List<Donation> allDonations = donationRepository.findAll();
+
+        // Filter donations by user ID
+        return allDonations.stream()
+                .filter(donation -> donation.getUserId() == userId)
+                .collect(Collectors.toList());
+    }
+    public List<Donation> getAllDonationsSortedByStatus() {
+        // Fetch all donations from the repository
+        List<Donation> allDonations = donationRepository.findAll();
+
+        // Sort donations by status: pending, picked up, delivered
+        return allDonations.stream()
+                .sorted(Comparator.comparing(Donation::getDonationStatus))
+                .collect(Collectors.toList());
     }
 }
