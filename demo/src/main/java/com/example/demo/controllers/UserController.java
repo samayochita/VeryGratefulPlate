@@ -94,12 +94,24 @@ public class UserController {
                 return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Incorrect password");
             }
 
-            // Include user ID in the response
-            Map<String, Object> responseData = new HashMap<>();
-            responseData.put("userId", existingUser.getUserId()); // Assuming ID is stored as 'id' in User entity
+            // Determine user type
+            UserType userType = existingUser.getUserType();
+            if (userType == UserType.USER) {
+                // User login logic
+                Map<String, Object> responseData = new HashMap<>();
+                responseData.put("userId", existingUser.getUserId());
 
-            LOGGER.info("Login successful");
-            return ResponseEntity.ok(responseData);
+                LOGGER.info("User login successful");
+                return ResponseEntity.ok(responseData);
+            } else if (userType == UserType.ADMIN) {
+                // Admin login logic
+
+                LOGGER.info("Admin login successful");
+                return ResponseEntity.ok("Admin login successful");
+            } else {
+                LOGGER.error("Invalid user type");
+                return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid user type");
+            }
         } catch (Exception ex) {
             LOGGER.error("Login failed", ex);
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Login failed");

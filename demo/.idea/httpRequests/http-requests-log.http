@@ -1,3 +1,37 @@
+POST http://localhost:9191/api/users/login
+Content-Type: application/json
+Content-Length: 57
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Cookie: JSESSIONID=1A675B4046881892457A0CF4880BC7AB
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "emailId": "admin@gmail.com",
+  "password": "admin"
+}
+
+<> 2024-05-01T224032.200.txt
+
+###
+
+POST http://localhost:9191/api/users/login
+Content-Type: application/json
+Content-Length: 63
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Cookie: JSESSIONID=1A675B4046881892457A0CF4880BC7AB
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "emailId": "pracheti@gmail.com",
+  "password": "pracheti"
+}
+
+<> 2024-05-01T223922.200.json
+
+###
+
 GET http://localhost:9191/api/deliveryperson/5/pendingdonations
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
@@ -624,66 +658,6 @@ Accept-Encoding: br,deflate,gzip,x-gzip
 }
 
 <> 2024-04-27T231837.200.json
-
-###
-
-POST http://localhost:9191/api/donations/add
-Content-Type: application/json
-Content-Length: 333
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Cookie: JSESSIONID=DFDD5BC27C8A6D0937966852447A45DD
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "user": {
-  "userId": 1
-   },
-  "additionalNotes": "None",
-  "category": "Veg",
-  "deliveryPerson": {
-    "id": 5
-  },
-  "donationStatus": "picked-up",
-  "donorName": "Pracheti",
-  "donorPhoneNumber": "7832341235",
-  "foodPreparationDateTime": "2024-04-24T18:00:00",
-  "pickupAddress": "123 Jump Street",
-  "quantityInKg": 2.5
-
-}
-
-<> 2024-04-27T231817.500.json
-
-###
-
-POST http://localhost:9191/api/donations/add
-Content-Type: application/json
-Content-Length: 333
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Cookie: JSESSIONID=DFDD5BC27C8A6D0937966852447A45DD
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "user": {
-  "userId": 1
-   },
-  "additionalNotes": "None",
-  "category": "Veg",
-  "deliveryPerson": {
-    "id": 4
-  },
-  "donationStatus": "picked-up",
-  "donorName": "Pracheti",
-  "donorPhoneNumber": "7832341235",
-  "foodPreparationDateTime": "2024-04-24T18:00:00",
-  "pickupAddress": "123 Jump Street",
-  "quantityInKg": 2.5
-
-}
-
-<> 2024-04-27T231808.500.json
 
 ###
 
