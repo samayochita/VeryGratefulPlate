@@ -1,18 +1,14 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import dummyData from "./dummydata.json";
 import styles from "./DeliveryPersonDashboard.module.css";
 import { Header } from "../../components/Header";
 
 export const DeliveryPersonDashboard = () => {
   // Retrieve the email from the route parameters
   const location = useLocation();
-  const email = location.state?.email;
 
   // Find the user data based on the email
-  const userData = dummyData.deliveryPersons.find(
-    (person) => person.email === email
-  );
+  const userData = location.state?.userData;
 
   return (
     <div className={styles.container}>
@@ -29,7 +25,7 @@ export const DeliveryPersonDashboard = () => {
           {userData && (
             <div>
               <p>
-                <strong>EMAIL:</strong> {userData.email}
+                <strong>EMAIL:</strong> {userData.emailId}
               </p>
               <p>
                 <strong>NAME:</strong> {userData.name}
