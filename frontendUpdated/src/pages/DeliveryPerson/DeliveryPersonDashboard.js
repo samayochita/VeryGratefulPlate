@@ -1,7 +1,9 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation , useNavigate} from "react-router-dom";
 import styles from "./DeliveryPersonDashboard.module.css";
 import { Header } from "../../components/Header";
+import axios from "axios";
+import { BASE_URL } from "../../services/helper";
 
 export const DeliveryPersonDashboard = () => {
   // Retrieve the email from the route parameters
@@ -9,6 +11,19 @@ export const DeliveryPersonDashboard = () => {
 
   // Find the user data based on the email
   const userData = location.state?.userData;
+  const navigate = useNavigate(); 
+
+  const handleLogout = async () => {
+    try {
+      // Call backend logout endpoint
+      await axios.post(`${BASE_URL}/api/deliveryperson/logout`);
+      // Redirect to the homepage
+      navigate("/");
+    } catch (error) {
+      console.error('Error logging out:', error);
+      // Handle logout error
+    }
+  };
 
   return (
     <div className={styles.container}>
@@ -39,6 +54,7 @@ export const DeliveryPersonDashboard = () => {
             </div>
           )}
         </div>
+        <button onClick={handleLogout}>Logout</button>
       </div>
       </div>
     </div>
