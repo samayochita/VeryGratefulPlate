@@ -1,6 +1,7 @@
 package com.example.demo.repository;
 import com.example.demo.model.DeliveryPerson;
 import com.example.demo.model.DeliveryPersonStatus;
+import com.example.demo.model.Donation;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import java.util.List;
@@ -13,5 +14,7 @@ public interface DeliveryPersonRepository extends JpaRepository<DeliveryPerson, 
 
     DeliveryPerson findByEmailId(String email);
     // Additional methods as needed
+
+    DeliveryPerson findDeliveryPersonById(Long deliveryPersonId);
 }
 

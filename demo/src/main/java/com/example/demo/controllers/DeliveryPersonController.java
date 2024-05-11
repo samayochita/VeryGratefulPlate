@@ -3,6 +3,7 @@ import com.example.demo.model.DeliveryPerson;
 import com.example.demo.model.DeliveryPersonStatus;
 import com.example.demo.model.Donation;
 import com.example.demo.service.DeliveryPersonService;
+import com.example.demo.service.DonationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -10,7 +11,6 @@ import org.springframework.web.bind.annotation.*;
 
 
 import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 
 import java.util.List;
 
@@ -19,10 +19,12 @@ import java.util.List;
 public class DeliveryPersonController {
 
     private final DeliveryPersonService deliveryPersonService;
+    private final DonationService donationService;
 
     @Autowired
-    public DeliveryPersonController(DeliveryPersonService deliveryPersonService) {
+    public DeliveryPersonController(DeliveryPersonService deliveryPersonService, DonationService donationService) {
         this.deliveryPersonService = deliveryPersonService;
+        this.donationService = donationService;
     }
 
     @PostMapping("/register")
@@ -58,7 +60,7 @@ public class DeliveryPersonController {
     }
 
     @PostMapping("/logout")
-    public ResponseEntity<String> logout(HttpServletRequest request, HttpServletResponse response) {
+    public ResponseEntity<String> logout(HttpServletRequest request) {
         try {
             // Invalidate session
             request.getSession().invalidate();
@@ -66,6 +68,48 @@ public class DeliveryPersonController {
         } catch (Exception ex) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Logout failed");
         }
+    }
+    @PutMapping("/{deliveryPersonId}/pickedup")
+    public ResponseEntity<String> markAsPickedUp(@PathVariable("deliveryPersonId") Long deliveryPersonId) {
+        // Find delivery person by id
+        DeliveryPerson deliveryPerson = deliveryPersonService.findByDeliveryPersonId(deliveryPersonId);
+        if (deliveryPerson == null) {
+            return ResponseEntity.notFound().build();
+        }
+        // Find pending donations associated with the delivery person
+        List<Donation> pendingDonations = donationService.getPendingDonationsForDeliveryPerson(deliveryPersonId);
+        if (pendingDonations.isEmpty()) {
+            return ResponseEntity.badRequest().body("No pending donations for this delivery person.");
+        }
+
+        // Mark the first pending donation as picked up
+        Donation pendingDonation = pendingDonations.get(0);
+        pendingDonation.setDonationStatus("picked up");
+        donationService.updateDonation(pendingDonation);
+
+        return ResponseEntity.ok().body("Donation status updated to picked up");
+    }
+
+    @PutMapping("/{deliveryPersonId}/delivered")
+    public ResponseEntity<String> markAsDelivered(@PathVariable("deliveryPersonId") Long deliveryPersonId) {
+        // Find delivery person by id
+        DeliveryPerson deliveryPerson = deliveryPersonService.findByDeliveryPersonId(deliveryPersonId);
+        if (deliveryPerson == null) {
+            return ResponseEntity.notFound().build();
+        }
+
+        // Find delivered donations associated with the delivery person
+        List<Donation> pickedupDonations = donationService.getPickedupDonationsByDeliveryPerson(deliveryPersonId);
+        if (pickedupDonations.isEmpty()) {
+            return ResponseEntity.badRequest().body("No picked up donations for this delivery person.");
+        }
+
+        // Mark the first delivered donation as delivered
+        Donation pickedupDonation = pickedupDonations.get(0);
+        pickedupDonation.setDonationStatus("delivered");
+        donationService.updateDonation(pickedupDonation);
+
+        return ResponseEntity.ok().body("Donation status updated to delivered");
     }
     @GetMapping("/{deliveryPersonId}/pendingdonations")
     public ResponseEntity<List<Donation>> getPendingDonationsForDeliveryPerson(@PathVariable("deliveryPersonId") Long deliveryPersonId) {

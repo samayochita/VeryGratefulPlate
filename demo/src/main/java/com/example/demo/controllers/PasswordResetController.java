@@ -1,7 +1,9 @@
 package com.example.demo.controllers;
 import com.example.demo.dto.UserDTO;
+import com.example.demo.model.DeliveryPerson;
 import com.example.demo.model.PasswordResetToken;
 import com.example.demo.model.User;
+import com.example.demo.service.DeliveryPersonService;
 import com.example.demo.service.PasswordResetService;
 import com.example.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +19,11 @@ public class PasswordResetController {
     @Autowired
     private PasswordResetService passwordResetService;
 
-    @PostMapping("/forgotpassword")
+    @Autowired
+    private DeliveryPersonService deliveryPersonService;
+
+
+    @PostMapping("/forgotpassword/user")
     public ResponseEntity<String> forgotPassword(@RequestParam("emailId") String emailId) {
         User existingUser = userService.findByEmailId(emailId);
         if (existingUser == null) {
@@ -25,21 +31,54 @@ public class PasswordResetController {
         }
 
         // Generate token, deactivate existing tokens, and save new token
-        PasswordResetToken token = passwordResetService.generateToken(existingUser);
+        PasswordResetToken token = passwordResetService.generateUserToken(existingUser);
 
         // Send the token in an email to the user
-        passwordResetService.sendResetTokenEmail(existingUser.getEmailId(), token.getToken());
+        passwordResetService.sendResetTokenEmailUser(existingUser.getEmailId(), token.getToken());
 
         return ResponseEntity.ok("Password reset token sent successfully");
     }
 
-    @PostMapping("/resetpassword")
+    @PostMapping("/resetpassword/user")
     public ResponseEntity<String> resetPassword(@RequestBody PasswordResetToken request) {
         String emailId = request.getUser().getEmailId();
         String token = request.getToken();
         String newPassword = request.getNewPassword();
         // Validate token and reset password
-        boolean resetSuccessful = passwordResetService.resetPassword(emailId, token, newPassword);
+        boolean resetSuccessful = passwordResetService.resetUserPassword(emailId, token, newPassword);
+
+        if (resetSuccessful) {
+            return ResponseEntity.ok("Password reset successful");
+        } else {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Invalid or expired token");
+        }
+    }
+
+    // Endpoint for forgot password for delivery person
+    @PostMapping("/forgotpassword/deliveryperson")
+    public ResponseEntity<String> forgotDeliveryPersonPassword(@RequestParam("emailId") String emailId) {
+        DeliveryPerson existingDeliveryPerson = deliveryPersonService.findByEmailId(emailId);
+        if (existingDeliveryPerson == null) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Delivery person not found");
+        }
+
+        // Generate token, deactivate existing tokens, and save new token
+        PasswordResetToken token = passwordResetService.generateDeliveryPersonToken(existingDeliveryPerson);
+
+        // Send the token in an email to the delivery person
+        passwordResetService.sendResetTokenEmailDeliveryPerson(existingDeliveryPerson.getEmailId(), token.getToken());
+
+        return ResponseEntity.ok("Password reset token sent successfully");
+    }
+
+    // Endpoint for reset password for delivery person
+    @PostMapping("/resetpassword/deliveryperson")
+    public ResponseEntity<String> resetDeliveryPersonPassword(@RequestBody PasswordResetToken request) {
+        String emailId = request.getDeliveryPerson().getEmailId();
+        String token = request.getToken();
+        String newPassword = request.getNewPassword();
+        // Validate token and reset password
+        boolean resetSuccessful = passwordResetService.resetDeliveryPersonPassword(emailId, token, newPassword);
 
         if (resetSuccessful) {
             return ResponseEntity.ok("Password reset successful");

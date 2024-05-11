@@ -93,4 +93,15 @@ public class DonationService {
                 .sorted(Comparator.comparing(Donation::getDonationStatus))
                 .collect(Collectors.toList());
     }
+
+
+    // Method to get pending donations for a delivery person
+    public List<Donation> getPendingDonationsForDeliveryPerson(Long deliveryPersonId) {
+        return donationRepository.findByDeliveryPersonIdAndDonationStatus(deliveryPersonId, "pending");
+    }
+
+    // Method to get picked up donations for a delivery person
+    public List<Donation> getPickedupDonationsByDeliveryPerson(Long deliveryPersonId) {
+        return donationRepository.findByDeliveryPersonIdAndDonationStatus(deliveryPersonId, "picked up");
+    }
 }
