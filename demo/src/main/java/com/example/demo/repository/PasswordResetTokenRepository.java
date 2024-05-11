@@ -14,7 +14,11 @@ public interface PasswordResetTokenRepository extends JpaRepository<PasswordRese
 
     PasswordResetToken  findByDeliveryPersonAndTokenAndActiveTrue(DeliveryPerson deliveryPerson, String token);
 
+<<<<<<< HEAD
      PasswordResetToken findByDeliveryPersonAndActiveTrue(DeliveryPerson deliveryPerson);
+=======
+    PasswordResetToken findByDeliveryPersonAndActiveTrue(DeliveryPerson deliveryPerson);
+>>>>>>> Sam
 
 
 }

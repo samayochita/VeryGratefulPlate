@@ -35,6 +35,10 @@ public class DonationController {
         return donationService.addDonation(donation);
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> Sam
     @GetMapping("/userdonations")
     public ResponseEntity<List<Donation>> getDonations(@RequestParam Integer userId, @RequestParam UserType userType) {
         try {

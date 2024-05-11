@@ -3,6 +3,7 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.AssertTrue;
 import lombok.Getter;
 
+
 import java.time.LocalDateTime;
 
 @Entity
@@ -38,8 +39,14 @@ public class PasswordResetToken {
         return (user != null && deliveryPerson == null) || (user == null && deliveryPerson != null);
     }
 
-    public PasswordResetToken(Long id, String token, User user, LocalDateTime expiryTime, boolean active) {
-        this.id = id;
+    public DeliveryPerson getDeliveryPerson() {
+        return deliveryPerson;
+    }
+
+    public void setDeliveryPerson(DeliveryPerson deliveryPerson) {
+        this.deliveryPerson = deliveryPerson;
+    }
+    public PasswordResetToken(String token, User user, DeliveryPerson deliveryPerson, LocalDateTime expiryTime, String newPassword, boolean active) {
         this.token = token;
         this.user = user;
         this.deliveryPerson = deliveryPerson;
@@ -47,6 +54,7 @@ public class PasswordResetToken {
         this.newPassword = newPassword;
         this.active = active;
     }
+
 
     public PasswordResetToken(Long id, String token, User user, DeliveryPerson deliveryPerson, LocalDateTime expiryTime, String newPassword, boolean active) {
         this.id = id;
@@ -105,14 +113,6 @@ public class PasswordResetToken {
         this.active = active;
     }
 
-
-    public DeliveryPerson getDeliveryPerson() {
-        return deliveryPerson;
-    }
-
-    public void setDeliveryPerson(DeliveryPerson deliveryPerson) {
-        this.deliveryPerson = deliveryPerson;
-    }
 
     public String getNewPassword() {
         return newPassword;

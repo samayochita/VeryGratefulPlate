@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.*;
 
 
 import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 
 import java.util.List;
 
@@ -61,7 +60,7 @@ public class DeliveryPersonController {
     }
 
     @PostMapping("/logout")
-    public ResponseEntity<String> logout(HttpServletRequest request, HttpServletResponse response) {
+    public ResponseEntity<String> logout(HttpServletRequest request) {
         try {
             // Invalidate session
             request.getSession().invalidate();

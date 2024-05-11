@@ -35,6 +35,10 @@ public class DeliveryPersonService {
     public DeliveryPerson findByDeliveryPersonId(Long deliveryPersonId){
         return deliveryPersonRepository.findDeliveryPersonById(deliveryPersonId);
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> Sam
     public void save(DeliveryPerson deliveryPerson) {
         deliveryPersonRepository.save(deliveryPerson);
     }

@@ -6,6 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="4bb3aa2d-04e8-47a3-91e9-a5460ea8a306" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+=======
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controllers/PasswordResetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controllers/PasswordResetController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/model/PasswordResetToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/model/PasswordResetToken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/controllers/PasswordResetController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/controllers/PasswordResetController.class" afterDir="false" />
+>>>>>>> Sam
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,6 +88,7 @@
     <configuration name="generated-requests | #15" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="15" requestIdentifier="#15" runType="Run single request">
       <method v="2" />
     </configuration>
+<<<<<<< HEAD
     <configuration name="generated-requests | #33" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="33" requestIdentifier="#33" runType="Run single request">
       <method v="2" />
     </configuration>
@@ -89,6 +96,15 @@
       <method v="2" />
     </configuration>
     <configuration name="generated-requests | #36" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="36" requestIdentifier="#36" runType="Run single request">
+=======
+    <configuration name="generated-requests | #30" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="30" requestIdentifier="#30" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests | #32" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="32" requestIdentifier="#32" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests | #33" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="33" requestIdentifier="#33" runType="Run single request">
+>>>>>>> Sam
       <method v="2" />
     </configuration>
     <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
@@ -100,11 +116,19 @@
     </configuration>
     <recent_temporary>
       <list>
+<<<<<<< HEAD
         <item itemvalue="HTTP Request.generated-requests | #36" />
         <item itemvalue="HTTP Request.generated-requests | #35" />
         <item itemvalue="HTTP Request.generated-requests | #15" />
         <item itemvalue="HTTP Request.generated-requests | #14" />
         <item itemvalue="HTTP Request.generated-requests | #33" />
+=======
+        <item itemvalue="HTTP Request.generated-requests | #33" />
+        <item itemvalue="HTTP Request.generated-requests | #32" />
+        <item itemvalue="HTTP Request.generated-requests | #15" />
+        <item itemvalue="HTTP Request.generated-requests | #14" />
+        <item itemvalue="HTTP Request.generated-requests | #30" />
+>>>>>>> Sam
       </list>
     </recent_temporary>
   </component>
@@ -137,5 +161,16 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

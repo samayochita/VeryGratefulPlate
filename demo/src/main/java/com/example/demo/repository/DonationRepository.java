@@ -9,9 +9,11 @@ import java.util.List;
 
 @Repository
 public interface DonationRepository extends JpaRepository<Donation, Integer> {
-    List<Donation> findByUserEmailId(String userEmailId);
-    List<Donation> findByDonationStatus(String donationStatus);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> Sam
     // Method to find donations by delivery person id and donation status
     List<Donation> findByDeliveryPersonIdAndDonationStatus(Long deliveryPersonId, String donationStatus);
 

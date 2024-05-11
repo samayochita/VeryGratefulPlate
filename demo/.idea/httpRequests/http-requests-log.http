@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 PUT http://localhost:9191/api/deliveryperson/2/delivered
 Content-Type: application/x-www-form-urlencoded
 Content-Length: 0
@@ -99,6 +100,11 @@ Accept-Encoding: br,deflate,gzip,x-gzip
 POST http://localhost:9191/resetpassword/deliveryperson
 Content-Type: application/json
 Content-Length: 149
+=======
+POST http://localhost:9191/resetpassword/deliveryperson
+Content-Type: application/json
+Content-Length: 153
+>>>>>>> Sam
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
 Cookie: JSESSIONID=885443E13CEEA9CCC95D892A5C21C482
@@ -109,17 +115,29 @@ Accept-Encoding: br,deflate,gzip,x-gzip
   "deliveryPerson": {
     "emailId": "swecsamayochita@gmail.com"
   },
+<<<<<<< HEAD
   "token": "26ff2afa-4365-4b0d-8dfb-670221080161",
   "newPassword": "swec"
 }
 
 <> 2024-05-12T024601.500.json
+=======
+  "token": "74ca1d2d-0533-418a-babb-ef3f43715a7a",
+  "newPassword": "swecswec"
+}
+
+<> 2024-05-12T021155.200.txt
+>>>>>>> Sam
 
 ###
 
 POST http://localhost:9191/resetpassword/deliveryperson
 Content-Type: application/json
+<<<<<<< HEAD
 Content-Length: 157
+=======
+Content-Length: 94
+>>>>>>> Sam
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
 Cookie: JSESSIONID=885443E13CEEA9CCC95D892A5C21C482
@@ -127,6 +145,7 @@ Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
 
+<<<<<<< HEAD
   "deliveryPerson": {
     "emailId": "swecsamayochita@gmail.com"
   },
@@ -135,12 +154,24 @@ Accept-Encoding: br,deflate,gzip,x-gzip
 }
 
 <> 2024-05-12T024534.500.json
+=======
+  "id": 7,
+  "token": "74ca1d2d-0533-418a-babb-ef3f43715a7a",
+  "newPassword": "swecswec"
+}
+
+<> 2024-05-12T021023.500.json
+>>>>>>> Sam
 
 ###
 
 POST http://localhost:9191/resetpassword/deliveryperson
 Content-Type: application/json
+<<<<<<< HEAD
 Content-Length: 157
+=======
+Content-Length: 95
+>>>>>>> Sam
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
 Cookie: JSESSIONID=885443E13CEEA9CCC95D892A5C21C482
@@ -148,6 +179,7 @@ Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
 
+<<<<<<< HEAD
   "deliveryPerson": {
     "emailId": "swecsamayochita@gmail.com"
   },
@@ -156,6 +188,75 @@ Accept-Encoding: br,deflate,gzip,x-gzip
 }
 
 <> 2024-05-12T024512.500.json
+=======
+  "id": 7,
+
+  "token": "74ca1d2d-0533-418a-babb-ef3f43715a7a",
+  "newPassword": "swecswec"
+}
+
+<> 2024-05-12T021014.500.json
+
+###
+
+POST http://localhost:9191/resetpassword/deliveryperson
+Content-Type: application/json
+Content-Length: 97
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Cookie: JSESSIONID=885443E13CEEA9CCC95D892A5C21C482
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+
+  "id": 7
+
+  "token": "74ca1d2d-0533-418a-babb-ef3f43715a7a",
+  "newPassword": "swecswec"
+}
+
+<> 2024-05-12T021007.400.json
+
+###
+
+POST http://localhost:9191/resetpassword/deliveryperson
+Content-Type: application/json
+Content-Length: 121
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Cookie: JSESSIONID=885443E13CEEA9CCC95D892A5C21C482
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "deliveryPerson": {
+    "id": 7
+  },
+  "token": "74ca1d2d-0533-418a-babb-ef3f43715a7a",
+  "newPassword": "swecswec"
+}
+
+<> 2024-05-12T020950.400.txt
+
+###
+
+POST http://localhost:9191/resetpassword/deliveryperson
+Content-Type: application/json
+Content-Length: 121
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Cookie: JSESSIONID=885443E13CEEA9CCC95D892A5C21C482
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "deliveryPerson": {
+    "id": 7
+  },
+  "token": "74ca1d2d-0533-418a-babb-ef3f43715a7a",
+  "newPassword": "swecswec"
+}
+
+<> 2024-05-12T020401.400.txt
+>>>>>>> Sam
 
 ###
 
@@ -167,7 +268,135 @@ User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
 Cookie: JSESSIONID=885443E13CEEA9CCC95D892A5C21C482
 Accept-Encoding: br,deflate,gzip,x-gzip
 
+<<<<<<< HEAD
 <> 2024-05-12T024439.200.txt
+=======
+<> 2024-05-12T015939.200.txt
+
+###
+
+POST http://localhost:9191/forgotpassword/deliveryperson?emailId=rohit@gmail.com
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Cookie: JSESSIONID=885443E13CEEA9CCC95D892A5C21C482
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-05-12T015559.200.txt
+
+###
+
+POST http://localhost:9191/resetpassword/user
+Content-Type: application/json
+Content-Length: 148
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Cookie: JSESSIONID=885443E13CEEA9CCC95D892A5C21C482
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "token": "e659a5d7-6022-4037-87f0-b0c6091d3240",
+  "user": {
+    "emailId" : "samayochitabroski@gmail.com"
+  },
+  "newPassword": "newpassword"
+}
+
+<> 2024-05-12T015425.200.txt
+
+###
+
+POST http://localhost:9191/resetpassword
+Content-Type: application/json
+Content-Length: 148
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Cookie: JSESSIONID=885443E13CEEA9CCC95D892A5C21C482
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "token": "e659a5d7-6022-4037-87f0-b0c6091d3240",
+  "user": {
+    "emailId" : "samayochitabroski@gmail.com"
+  },
+  "newPassword": "newpassword"
+}
+
+<> 2024-05-12T015412.404.json
+
+###
+
+POST http://localhost:9191/forgotpassword/user?emailId=samayochitabroski@gmail.com
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Cookie: JSESSIONID=885443E13CEEA9CCC95D892A5C21C482
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-05-12T015319.200.txt
+
+###
+
+PUT http://localhost:9191/api/deliveryperson/3/pickedup
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Cookie: JSESSIONID=885443E13CEEA9CCC95D892A5C21C482
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-05-11T150337.400.txt
+
+###
+
+PUT http://localhost:9191/api/deliveryperson/2/delivered
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Cookie: JSESSIONID=885443E13CEEA9CCC95D892A5C21C482
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-05-11T150313.400.txt
+
+###
+
+PUT http://localhost:9191/api/deliveryperson/3/delivered
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Cookie: JSESSIONID=885443E13CEEA9CCC95D892A5C21C482
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-05-11T150304.200.txt
+
+###
+
+PUT http://localhost:9191/api/deliveryperson/3/pickedup
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Cookie: JSESSIONID=885443E13CEEA9CCC95D892A5C21C482
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-05-11T150145.200.txt
+
+###
+
+POST http://localhost:9191/forgotpassword?emailId=samayochitabroski@gmail.com
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Cookie: JSESSIONID=885443E13CEEA9CCC95D892A5C21C482
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-05-11T134819.200.txt
+>>>>>>> Sam
 
 ###
 
@@ -751,6 +980,7 @@ Accept-Encoding: br,deflate,gzip,x-gzip
 
 ###
 
+<<<<<<< HEAD
 POST http://localhost:9191/api/users/loginuser
 Content-Type: application/json
 Content-Length: 82
@@ -859,3 +1089,5 @@ Accept-Encoding: br,deflate,gzip,x-gzip
 
 ###
 
+=======
+>>>>>>> Sam
