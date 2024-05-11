@@ -39,27 +39,4 @@ public class UserService {
     public void save(User user) {
         userRepository.save(user);
     }
-
-    // Method to get donations by user ID
-    public List<Donation> getDonationsByUserId(int userId) {
-        // Fetch all donations from the repository
-
-        List<Donation> allDonations = donationRepository.findAll();
-
-        // Filter donations by user ID
-        return allDonations.stream()
-                .filter(donation -> donation.getUserId() == userId)
-                .collect(Collectors.toList());
-    }
-
-    // Method to get all donations sorted by status
-    public List<Donation> getAllDonationsSortedByStatus() {
-        // Fetch all donations from the repository
-        List<Donation> allDonations = donationRepository.findAll();
-
-        // Sort donations by status: pending, picked up, delivered
-        return allDonations.stream()
-                .sorted(Comparator.comparing(Donation::getDonationStatus))
-                .collect(Collectors.toList());
-    }
 }

@@ -35,40 +35,6 @@ public class DonationController {
         return donationService.addDonation(donation);
     }
 
-
-    @PutMapping("/{donationId}/delivered")
-    public ResponseEntity<String> markAsDelivered(@PathVariable("donationId") int donationId) {
-        Donation existingDonation = donationService.getDonationById(donationId);
-        if (existingDonation == null) {
-            return ResponseEntity.notFound().build();
-        }
-
-        if (!existingDonation.getDonationStatus().equals("picked up")) {
-            return ResponseEntity.badRequest().body("Donation status is not picked up.");
-        }
-
-        existingDonation.setDonationStatus("delivered");
-        donationService.updateDonation(existingDonation);
-
-        return ResponseEntity.ok().body("Donation status updated to delivered");
-    }
-    @PutMapping("/{donationId}/pickedup")
-    public ResponseEntity<String> markAsPickedUp(@PathVariable("donationId") int donationId, @RequestBody Donation donation) {
-        Donation existingDonation = donationService.getDonationById(donationId);
-        if (existingDonation == null) {
-            return ResponseEntity.notFound().build();
-        }
-
-        if (!existingDonation.getDonationStatus().equals("pending")) {
-            return ResponseEntity.badRequest().body("Donation status is not pending.");
-        }
-
-        existingDonation.setDonationStatus("picked up");
-        donationService.updateDonation(existingDonation);
-
-        return ResponseEntity.ok().body("Donation status updated to picked up");
-    }
-
     @GetMapping("/userdonations")
     public ResponseEntity<List<Donation>> getDonations(@RequestParam Integer userId, @RequestParam UserType userType) {
         try {

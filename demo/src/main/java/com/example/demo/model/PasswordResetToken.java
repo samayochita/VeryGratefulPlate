@@ -1,5 +1,8 @@
 package com.example.demo.model;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.AssertTrue;
+import lombok.Getter;
+
 import java.time.LocalDateTime;
 
 @Entity
@@ -17,15 +20,42 @@ public class PasswordResetToken {
     @JoinColumn(name = "user_id", referencedColumnName = "user_id")
     private User user;
 
+    @ManyToOne
+    @JoinColumn(name = "delivery_person_id", referencedColumnName = "id")
+    private DeliveryPerson deliveryPerson;
+
     @Column(name = "expiry_time")
     private LocalDateTime expiryTime;
 
     @Column(name = "new_password")
     private String newPassword;
 
+    @Column(name = "active")
+    private boolean active;
 
-    public String getNewPassword() {
-        return newPassword;
+    @AssertTrue(message = "Either user_id or delivery_person_id must be provided, but not both")
+    private boolean isEitherUserOrDeliveryPersonNotNull() {
+        return (user != null && deliveryPerson == null) || (user == null && deliveryPerson != null);
+    }
+
+    public PasswordResetToken(Long id, String token, User user, LocalDateTime expiryTime, boolean active) {
+        this.id = id;
+        this.token = token;
+        this.user = user;
+        this.deliveryPerson = deliveryPerson;
+        this.expiryTime = expiryTime;
+        this.newPassword = newPassword;
+        this.active = active;
+    }
+
+    public PasswordResetToken(Long id, String token, User user, DeliveryPerson deliveryPerson, LocalDateTime expiryTime, String newPassword, boolean active) {
+        this.id = id;
+        this.token = token;
+        this.user = user;
+        this.deliveryPerson = deliveryPerson;
+        this.expiryTime = expiryTime;
+        this.newPassword = newPassword;
+        this.active = active;
     }
 
     public void setNewPassword(String newPassword) {
@@ -34,20 +64,6 @@ public class PasswordResetToken {
     public PasswordResetToken() {
     }
 
-    public PasswordResetToken(Long id, String token, User user, LocalDateTime expiryTime, boolean active) {
-        this.id = id;
-        this.token = token;
-        this.user = user;
-        this.expiryTime = expiryTime;
-        this.active = active;
-    }
-
-    public PasswordResetToken(String token, User user, LocalDateTime expiryTime, boolean active) {
-        this.token = token;
-        this.user = user;
-        this.expiryTime = expiryTime;
-        this.active = active;
-    }
 
     public Long getId() {
         return id;
@@ -89,8 +105,18 @@ public class PasswordResetToken {
         this.active = active;
     }
 
-    @Column(name = "active")
-    private boolean active;
 
-    // Constructors, getters, and setters
+    public DeliveryPerson getDeliveryPerson() {
+        return deliveryPerson;
+    }
+
+    public void setDeliveryPerson(DeliveryPerson deliveryPerson) {
+        this.deliveryPerson = deliveryPerson;
+    }
+
+    public String getNewPassword() {
+        return newPassword;
+    }
+
+
 }

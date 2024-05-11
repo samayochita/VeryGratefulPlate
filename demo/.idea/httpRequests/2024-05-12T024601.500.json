@@ -1,0 +1,6 @@
+{
+  "timestamp": "2024-05-11T21:16:01.290+00:00",
+  "status": 500,
+  "error": "Internal Server Error",
+  "path": "/resetpassword/deliveryperson"
+}

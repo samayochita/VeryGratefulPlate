@@ -12,6 +12,11 @@ public interface DonationRepository extends JpaRepository<Donation, Integer> {
     List<Donation> findByUserEmailId(String userEmailId);
     List<Donation> findByDonationStatus(String donationStatus);
 
+    // Method to find donations by delivery person id and donation status
+    List<Donation> findByDeliveryPersonIdAndDonationStatus(Long deliveryPersonId, String donationStatus);
+
+
+    // Method to find donations by delivery person id
     @Query("SELECT d FROM Donation d WHERE d.deliveryPerson.id = :deliveryPersonId AND d.donationStatus = 'pending'")
     List<Donation> findPendingDonationsByDeliveryPersonId(Long deliveryPersonId);
 

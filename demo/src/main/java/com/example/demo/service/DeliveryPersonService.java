@@ -32,4 +32,10 @@ public class DeliveryPersonService {
         // Retrieve pending donations associated with the delivery person ID
         return donationRepository.findPendingDonationsByDeliveryPersonId(deliveryPersonId);
     }
+    public DeliveryPerson findByDeliveryPersonId(Long deliveryPersonId){
+        return deliveryPersonRepository.findDeliveryPersonById(deliveryPersonId);
+    }
+    public void save(DeliveryPerson deliveryPerson) {
+        deliveryPersonRepository.save(deliveryPerson);
+    }
 }
