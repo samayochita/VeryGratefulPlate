@@ -129,7 +129,6 @@ public class UserController {
                 LOGGER.error("Incorrect password");
                 return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Incorrect password");
             }
-
             // Check if user type is "ADMIN"
             if (userDTO.getUserType().equals("ADMIN")) {
                 LOGGER.info("Admin login successful");
