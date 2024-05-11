@@ -75,7 +75,7 @@ public class UserController {
         return user;
     }
 
-    @PostMapping(path = "/login")
+    @PostMapping(path = "/loginuser")
     public ResponseEntity<Object> loginUser(@RequestBody UserDTO userDTO) {
         try {
             LOGGER.info("Logging in user...");
@@ -94,17 +94,63 @@ public class UserController {
                 return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Incorrect password");
             }
 
+            // Check if user type is "USER"
+            if (!userDTO.getUserType().equals("USER")) {
+                LOGGER.error("User login failed: Invalid user type");
+                return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("User login failed: Invalid user type");
+            }
+
             // Include user ID in the response
             Map<String, Object> responseData = new HashMap<>();
-            responseData.put("userId", existingUser.getUserId()); // Assuming ID is stored as 'id' in User entity
+            responseData.put("userId", existingUser.getUserId()); // Assuming ID is stored as 'userId' in User entity
 
-            LOGGER.info("Login successful");
+            LOGGER.info("User login successful");
             return ResponseEntity.ok(responseData);
         } catch (Exception ex) {
             LOGGER.error("Login failed", ex);
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Login failed");
         }
     }
+    @PostMapping(path = "/loginadmin")
+    public ResponseEntity<Object> loginAdmin(@RequestBody UserDTO userDTO) {
+        try {
+            LOGGER.info("Logging in user...");
+
+            // Check if user with the provided email exists
+            User existingUser = userService.findByEmailId(userDTO.getEmailId());
+
+            if (existingUser == null) {
+                LOGGER.error("User not found");
+                return ResponseEntity.status(HttpStatus.NOT_FOUND).body("User not found");
+            }
+
+            // Check if the provided password matches the user's password
+            if (!existingUser.getPassword().equals(userDTO.getPassword())) {
+                LOGGER.error("Incorrect password");
+                return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Incorrect password");
+            }
+            // Check if user type is "ADMIN"
+            if (userDTO.getUserType().equals("ADMIN")) {
+                LOGGER.info("Admin login successful");
+
+                // Include user ID in the response
+                Map<String, Object> responseData = new HashMap<>();
+                responseData.put("userId", existingUser.getUserId()); // Assuming ID is stored as 'userId' in User entity
+
+                return ResponseEntity.ok(responseData);
+            }
+
+            // If user type is not "ADMIN", return unauthorized
+            else {
+                LOGGER.error("User login failed: Invalid user type");
+                return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("User login failed: Invalid user type");
+            }
+        } catch (Exception ex) {
+            LOGGER.error("Login failed", ex);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Login failed");
+        }
+    }
+
 
     @PostMapping("/logout")
     public ResponseEntity<String> logout(HttpServletRequest request, HttpServletResponse response) {

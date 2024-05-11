@@ -1,4 +1,5 @@
 package com.example.demo.controllers;
+import com.example.demo.dto.UserDTO;
 import com.example.demo.model.PasswordResetToken;
 import com.example.demo.model.User;
 import com.example.demo.service.PasswordResetService;
@@ -17,9 +18,8 @@ public class PasswordResetController {
     private PasswordResetService passwordResetService;
 
     @PostMapping("/forgotpassword")
-    public ResponseEntity<String> forgotPassword(@RequestBody User user) {
-        String email = user.getEmailId();
-        User existingUser = userService.findByEmailId(email);
+    public ResponseEntity<String> forgotPassword(@RequestParam("emailId") String emailId) {
+        User existingUser = userService.findByEmailId(emailId);
         if (existingUser == null) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("User not found");
         }
@@ -47,4 +47,5 @@ public class PasswordResetController {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Invalid or expired token");
         }
     }
+
 }
