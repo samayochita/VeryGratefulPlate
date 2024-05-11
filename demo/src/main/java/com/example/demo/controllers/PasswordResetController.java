@@ -24,7 +24,7 @@ public class PasswordResetController {
 
 
     @PostMapping("/forgotpassword/user")
-    public ResponseEntity<String> forgotPassword(@RequestParam("emailId") String emailId) {
+    public ResponseEntity<String> forgotUserPassword(@RequestParam("emailId") String emailId) {
         User existingUser = userService.findByEmailId(emailId);
         if (existingUser == null) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("User not found");
@@ -40,7 +40,7 @@ public class PasswordResetController {
     }
 
     @PostMapping("/resetpassword/user")
-    public ResponseEntity<String> resetPassword(@RequestBody PasswordResetToken request) {
+    public ResponseEntity<String> resetUserPassword(@RequestBody PasswordResetToken request) {
         String emailId = request.getUser().getEmailId();
         String token = request.getToken();
         String newPassword = request.getNewPassword();

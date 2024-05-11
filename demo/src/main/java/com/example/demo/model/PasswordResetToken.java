@@ -23,14 +23,19 @@ public class PasswordResetToken {
     @JoinColumn(name = "delivery_person_id", referencedColumnName = "id")
     private DeliveryPerson deliveryPerson;
 
-    // Add a method to check if either user or deliveryPerson is null but not both
-
-
     @Column(name = "expiry_time")
     private LocalDateTime expiryTime;
 
     @Column(name = "new_password")
     private String newPassword;
+
+    @Column(name = "active")
+    private boolean active;
+
+    @AssertTrue(message = "Either user_id or delivery_person_id must be provided, but not both")
+    private boolean isEitherUserOrDeliveryPersonNotNull() {
+        return (user != null && deliveryPerson == null) || (user == null && deliveryPerson != null);
+    }
 
     public DeliveryPerson getDeliveryPerson() {
         return deliveryPerson;
@@ -39,12 +44,6 @@ public class PasswordResetToken {
     public void setDeliveryPerson(DeliveryPerson deliveryPerson) {
         this.deliveryPerson = deliveryPerson;
     }
-
-    @AssertTrue(message = "Either user_id or delivery_person_id must be provided, but not both")
-    private boolean isEitherUserOrDeliveryPersonNotNull() {
-        return (user != null && deliveryPerson == null) || (user == null && deliveryPerson != null);
-    }
-
     public PasswordResetToken(String token, User user, DeliveryPerson deliveryPerson, LocalDateTime expiryTime, String newPassword, boolean active) {
         this.token = token;
         this.user = user;
@@ -115,8 +114,7 @@ public class PasswordResetToken {
         this.active = active;
     }
 
-    @Column(name = "active")
-    private boolean active;
+
 
     // Constructors, getters, and setters
 }
