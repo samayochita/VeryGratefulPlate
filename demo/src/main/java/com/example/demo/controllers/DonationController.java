@@ -29,16 +29,11 @@ public class DonationController {
         this.donationService = donationService;
     }
 
-
     @PostMapping(path="/add")
     public Donation addDonation(@RequestBody Donation donation) {
         return donationService.addDonation(donation);
     }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> Sam
     @GetMapping("/userdonations")
     public ResponseEntity<List<Donation>> getDonations(@RequestParam Integer userId, @RequestParam UserType userType) {
         try {
