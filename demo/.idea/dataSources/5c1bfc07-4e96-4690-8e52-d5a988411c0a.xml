@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="@localhost">
   <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.52">
+<<<<<<< HEAD
     <root id="1">
       <DefaultCasing>mixed/mixed</DefaultCasing>
       <DefaultEngine>InnoDB</DefaultEngine>
@@ -162,6 +163,9 @@ performance_schema|schema||mysql.session|localhost|SELECT|G
 sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <ServerVersion>8.1.0</ServerVersion>
     </root>
+=======
+    <root id="1"/>
+>>>>>>> Riya
     <collation id="2" parent="1" name="armscii8_general_ci">
       <Charset>armscii8</Charset>
       <DefaultForCharset>1</DefaultForCharset>

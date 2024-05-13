@@ -5,9 +5,11 @@ import { Header } from '../../components/Header';
 import { BASE_URL } from "../../services/helper";
 import { useState } from "react";
 import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
 export const DonateFoodForm = () => {
+  const navigate = useNavigate();
   const [userId, setUserId] = useState("");
 
   useEffect(() => {
@@ -50,6 +52,20 @@ export const DonateFoodForm = () => {
     }
   };
 
+  const handleLogout = async () => {
+    try {
+      // Call backend logout endpoint
+      const response = await axios.post(`${BASE_URL}/api/users/logout`);
+      console.log(response.data);
+      // Handle logout success
+      // Clear localStorage or perform any other necessary cleanup
+      localStorage.clear();
+      navigate("/");
+    } catch (error) {
+      console.error('Error:', error);
+      // Handle logout error
+    }
+  };
   return (
     
     <section className="registration">  
@@ -76,6 +92,7 @@ export const DonateFoodForm = () => {
         <textarea name="additionalNotes" id="additionalNotes" cols="30" rows="3" placeholder="Special Note"></textarea>
 
         <input type="submit" value="Submit" className="submitbtn" />
+        <button type="button" onClick={handleLogout}>Logout</button>
         </form>
     </div>
     </section>

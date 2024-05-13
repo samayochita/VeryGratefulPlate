@@ -1,18 +1,62 @@
-import React from "react";
-import { useLocation } from "react-router-dom";
-import dummyData from "./dummydata.json";
+import React, {useState, useEffect} from "react";
+import { useLocation , useNavigate} from "react-router-dom";
 import styles from "./DeliveryPersonDashboard.module.css";
 import { Header } from "../../components/Header";
+import axios from "axios";
+import { BASE_URL } from "../../services/helper";
 
 export const DeliveryPersonDashboard = () => {
-  // Retrieve the email from the route parameters
+  
   const location = useLocation();
-  const email = location.state?.email;
+  const userData = location.state?.userData;
+  const [donationId, setDonationId] = useState(null);
+  const [donationStatus, setDonationStatus] = useState(userData?.status);
+  const navigate = useNavigate(); 
 
-  // Find the user data based on the email
-  const userData = dummyData.deliveryPersons.find(
-    (person) => person.email === email
-  );
+  console.log(userData.id);
+
+  useEffect(() => {
+    // Fetch all donations associated with the delivery person's userId
+    const fetchUserDonations = async () => {
+      try {
+        const response = await axios.get(`${BASE_URL}/api/donations/userdonations?userId=${userData.id}&userType=DELIVERY_PERSON`);
+        // Assuming the first donation is the most recent one
+        if (response.data.length > 0) {
+          setDonationId(response.data[0].donationId);
+        }
+      } catch (error) {
+        console.error('Error fetching donation details:', error);
+        // Handle error
+      }
+    };
+
+    fetchUserDonations();
+  }, [userData]);
+
+
+  const handleDonationStatusChange = async () => {
+    try {
+      if (donationId) {
+        const newStatus = donationStatus === "pickedup" ? "delivered" : "pickedup";
+        await axios.put(`${BASE_URL}/api/donations/${donationId}/${newStatus}`);
+        setDonationStatus(newStatus);
+      } else {
+        console.error('Donation details not found for the delivery person');
+      }
+    } catch (error) {
+      console.error('Error updating donation status:', error);
+    }
+  };
+  const handleLogout = async () => {
+    try {
+      // Call backend logout endpoint
+      await axios.post(`${BASE_URL}/api/deliveryperson/logout`);
+      // Redirect to the homepage
+      navigate("/");
+    } catch (error) {
+      console.error('Error logging out:', error);
+    }
+  };
 
   return (
     <div className={styles.container}>
@@ -29,7 +73,7 @@ export const DeliveryPersonDashboard = () => {
           {userData && (
             <div>
               <p>
-                <strong>EMAIL:</strong> {userData.email}
+                <strong>EMAIL:</strong> {userData.emailId}
               </p>
               <p>
                 <strong>NAME:</strong> {userData.name}
@@ -43,6 +87,10 @@ export const DeliveryPersonDashboard = () => {
             </div>
           )}
         </div>
+        <button onClick={handleDonationStatusChange}>
+            {donationStatus === "pickedup" ? "Mark as Delivered" : "Mark as Picked Up"}
+        </button>
+        <button onClick={handleLogout}>Logout</button>
       </div>
       </div>
     </div>

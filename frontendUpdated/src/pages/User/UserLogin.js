@@ -21,6 +21,8 @@ export const UserLogin = () => {
 
   const navigate = useNavigate();
   const [loginError, setLoginError] = useState("");
+  const [forgotPasswordMessage, setForgotPasswordMessage] = useState(''); 
+
 
   const onSubmit = async (data) => {
     try {
@@ -38,6 +40,24 @@ export const UserLogin = () => {
       console.error("Login failed:", error);
       setLoginError("Login failed. Please check your credentials.");
     }
+  };
+
+  const handleForgotPassword = async() => {
+    
+      try {
+        const emailId = prompt("Enter your email address:");
+        if (emailId) {
+          await axios.post(`${BASE_URL}/forgotpassword`, { emailId });
+          setForgotPasswordMessage("Password reset token sent successfully. Check your email.");
+          // Redirect to the ResetPassword component with the email address
+          navigate(`/user-reset-password/${emailId}`);
+        }
+      } catch (error) {
+        console.error("Forgot password failed:", error);
+        setForgotPasswordMessage("Failed to send password reset token. Please try again later.");
+      }
+    
+    
   };
   
   return (
@@ -60,6 +80,8 @@ export const UserLogin = () => {
               <button type="submit" >LOGIN</button>
             </form>
             {loginError && <p className={styles.error_message}>{loginError}</p>}
+            <p className={styles.forgot_password} onClick={handleForgotPassword}>Forgot Password?</p>
+            {forgotPasswordMessage && <p className={styles.success_message}>{forgotPasswordMessage}</p>}
             <p className={styles.register_link}>
               Don't have an account? <Link to="/user-register">Register</Link>
             </p>

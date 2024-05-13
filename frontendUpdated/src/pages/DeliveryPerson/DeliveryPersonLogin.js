@@ -23,10 +23,10 @@ export const DeliveryPersonLogin = () => {
 
   const onSubmit = async (data) => {
     try {
-      const response = await axios.post(`${BASE_URL}/api/deliverypersons/login`, data);
+      const response = await axios.post(`${BASE_URL}/api/deliveryperson/login`, data);
       if (response.status === 200) {
         const { emailId } = response.data;
-        navigate("/delivery-person-dashboard", { state: { email: emailId } });
+        navigate("/delivery-person-dashboard", { state: { email: emailId, userData: response.data } });
       }
     } catch (error) {
       setError('Invalid email or password');
