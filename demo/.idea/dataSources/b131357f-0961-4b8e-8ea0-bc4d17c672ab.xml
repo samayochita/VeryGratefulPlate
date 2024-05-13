@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="spedemo3@localhost">
-  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.49">
+  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.52">
     <root id="1">
       <DefaultCasing>mixed/mixed</DefaultCasing>
       <DefaultEngine>InnoDB</DefaultEngine>
@@ -1098,19 +1098,16 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="300" parent="1" name="spedemo1">
-      <IntrospectionTimestamp>2024-04-16.17:32:09</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2024-04-16.06:32:09</LocalIntrospectionTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-04-16.06:32:09</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="301" parent="1" name="spedemo2">
-      <IntrospectionTimestamp>2024-04-27.19:13:22</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2024-04-27.08:13:22</LocalIntrospectionTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-04-27.08:13:22</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="302" parent="1" name="spedemo3">
       <Current>1</Current>
-      <IntrospectionTimestamp>2024-04-28.05:11:25</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2024-04-27.18:11:25</LocalIntrospectionTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-04-27.18:11:25</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <user id="303" parent="1" name="mysql.infoschema">
