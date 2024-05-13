@@ -55,7 +55,6 @@ public class PasswordResetToken {
         this.active = active;
     }
 
-
     public PasswordResetToken(Long id, String token, User user, DeliveryPerson deliveryPerson, LocalDateTime expiryTime, String newPassword, boolean active) {
         this.id = id;
         this.token = token;

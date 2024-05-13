@@ -1,0 +1,25 @@
+POST http://localhost:9191/api/donations/add
+Content-Type: application/json
+Content-Length: 293
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "user": {
+    "userId": 2
+  },
+  "donorName": "Nancy Gupta",
+  "donorPhoneNumber": "7422369453",
+  "pickupAddress": "123 Main Street",
+  "category": "Veg",
+  "quantityInKg": 2.0,
+  "foodPreparationDateTime": "2024-04-24T18:00:00",
+  "additionalNotes": null,
+  "donationStatus": "pending"
+}
+
+<> 2024-05-13T114323.200.json
+
+###
+
