@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { useLocation , useNavigate} from "react-router-dom";
 import styles from "./DeliveryPersonDashboard.module.css";
 import { Header } from "../../components/Header";
@@ -6,13 +6,47 @@ import axios from "axios";
 import { BASE_URL } from "../../services/helper";
 
 export const DeliveryPersonDashboard = () => {
-  // Retrieve the email from the route parameters
+  
   const location = useLocation();
-
-  // Find the user data based on the email
   const userData = location.state?.userData;
+  const [donationId, setDonationId] = useState(null);
+  const [donationStatus, setDonationStatus] = useState(userData?.status);
   const navigate = useNavigate(); 
 
+  console.log(userData.id);
+
+  useEffect(() => {
+    // Fetch all donations associated with the delivery person's userId
+    const fetchUserDonations = async () => {
+      try {
+        const response = await axios.get(`${BASE_URL}/api/donations/userdonations?userId=${userData.id}&userType=DELIVERY_PERSON`);
+        // Assuming the first donation is the most recent one
+        if (response.data.length > 0) {
+          setDonationId(response.data[0].donationId);
+        }
+      } catch (error) {
+        console.error('Error fetching donation details:', error);
+        // Handle error
+      }
+    };
+
+    fetchUserDonations();
+  }, [userData]);
+
+
+  const handleDonationStatusChange = async () => {
+    try {
+      if (donationId) {
+        const newStatus = donationStatus === "pickedup" ? "delivered" : "pickedup";
+        await axios.put(`${BASE_URL}/api/donations/${donationId}/${newStatus}`);
+        setDonationStatus(newStatus);
+      } else {
+        console.error('Donation details not found for the delivery person');
+      }
+    } catch (error) {
+      console.error('Error updating donation status:', error);
+    }
+  };
   const handleLogout = async () => {
     try {
       // Call backend logout endpoint
@@ -21,7 +55,6 @@ export const DeliveryPersonDashboard = () => {
       navigate("/");
     } catch (error) {
       console.error('Error logging out:', error);
-      // Handle logout error
     }
   };
 
@@ -54,6 +87,9 @@ export const DeliveryPersonDashboard = () => {
             </div>
           )}
         </div>
+        <button onClick={handleDonationStatusChange}>
+            {donationStatus === "pickedup" ? "Mark as Delivered" : "Mark as Picked Up"}
+        </button>
         <button onClick={handleLogout}>Logout</button>
       </div>
       </div>

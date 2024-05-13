@@ -18,6 +18,8 @@ import {DeliveryPersonPickup } from './pages/DeliveryPerson/DeliveryPersonPickup
 import {DeliveryPersonOrders} from './pages/DeliveryPerson/DeliveryPersonOrders';
 import {OurTeam} from './pages/OurTeam/OurTeam';
 import { DeliveryPersonRegister } from './pages/DeliveryPerson/DeliveryPersonRegister';
+import { ResetPassword } from './pages/User/ResetPassword';
+
 
 function App() {
   return (
@@ -44,7 +46,9 @@ function App() {
           <Route path="/delivery-person-orders" element={<DeliveryPersonOrders />} />
           <Route path="/delivery-person-pickup" element={<DeliveryPersonPickup />} />
           <Route path="/our-team" element={<OurTeam/>} />
-         
+          <Route path="/user-reset-password" element={<ResetPassword />}/>
+          
+
           <Route path="*" element={<h1>Page Not Found</h1>} />
         </Routes>
       </Router>

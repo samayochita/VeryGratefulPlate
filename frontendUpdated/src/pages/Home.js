@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import logoImg from '../files/Grateful Plate copy.png'; // Assuming this is your new logo image
-import { GetInvolved } from './GetInvolved';
+// import { GetInvolved } from './GetInvolved';
 
 export const Home = () => {
     return (
