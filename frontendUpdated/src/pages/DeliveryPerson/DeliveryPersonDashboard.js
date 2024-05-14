@@ -21,8 +21,9 @@ export const DeliveryPersonDashboard = () => {
       try {
         const response = await axios.get(`${BASE_URL}/api/deliveryperson/${userData.id}/pendingdonations`);
         if (response.data && response.data.length > 0) {
-          setDonationId(response.data[0].id);
-          console.log(donationId);
+          const newDonationId = response.data[0].donationId; // Access donationId correctly
+          setDonationId(newDonationId);
+          console.log("Donation ID:", newDonationId);
         }
       } catch (error) {
         console.error("Error fetching donation ID:", error);
@@ -38,8 +39,8 @@ export const DeliveryPersonDashboard = () => {
   const handleDonationStatusChange = async () => {
     try {
       if (donationId) {
-        const newStatus = donationStatus === "pickedup" ? "delivered" : "pickedup";
-        await axios.put(`${BASE_URL}/api/deliveryperson/${userData.id}/${newStatus}`);
+        const newStatus = donationStatus === "pending" ? "pickedup" : "delivered";
+        await axios.put(`${BASE_URL}/api/deliveryperson/${userData.id}/donation/${donationId}/status`, { status: newStatus });
         setDonationStatus(newStatus);
       } else {
         console.error("Donation details not found for the delivery person");
@@ -95,7 +96,7 @@ export const DeliveryPersonDashboard = () => {
           )}
         </div>
         <button onClick={handleDonationStatusChange}>
-            {donationStatus === "pending" ? "pickedup" : "delivered"}
+            {donationStatus === "pending" ? "Mark As pickedup" : "Mark as delivered"}
         </button>
         <button onClick={handleLogout}>Logout</button>
       </div>

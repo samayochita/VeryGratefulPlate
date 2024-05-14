@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { Link , useNavigate} from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -17,7 +17,9 @@ export const AdminLogin = () => {
   const { register, handleSubmit, formState: { errors } } = useForm({
     resolver: yupResolver(schema),
   });
-
+  
+  
+  const navigate = useNavigate();
   const onSubmit = async (data) => {
     try {
       // Add the userType to the data
@@ -40,6 +42,7 @@ export const AdminLogin = () => {
       if (response.ok) {
         // Handle successful login
         console.log('Login successful:', result);
+        navigate("/admin-dashboard");
         
       } else {
         // Handle login failure
