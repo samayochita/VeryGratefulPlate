@@ -10,7 +10,7 @@ import './AdminLogin.css'; // Import the CSS file
 
 export const AdminLogin = () => {
   const schema = yup.object().shape({
-    email: yup.string().email().required(),
+    emailId: yup.string().email().required(),
     password: yup.string().min(4).max(20).required(),
   });
 
