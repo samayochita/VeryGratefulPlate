@@ -5,29 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4bb3aa2d-04e8-47a3-91e9-a5460ea8a306" name="Changes" comment="">
-
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controllers/PasswordResetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controllers/PasswordResetController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/model/PasswordResetToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/model/PasswordResetToken.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/controllers/PasswordResetController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/controllers/PasswordResetController.class" afterDir="false" />
-
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/5c1bfc07-4e96-4690-8e52-d5a988411c0a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5c1bfc07-4e96-4690-8e52-d5a988411c0a.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/b131357f-0961-4b8e-8ea0-bc4d17c672ab.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b131357f-0961-4b8e-8ea0-bc4d17c672ab.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/appLog.log" beforeDir="false" afterPath="$PROJECT_DIR$/appLog.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appLog.log.2024-04-26.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/appLog.log.2024-04-27.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/appLog.log.2024-04-28.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontendUpdated/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontendUpdated/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontendUpdated/src/pages/DeliveryPerson/DeliveryPersonLogin.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontendUpdated/src/pages/DeliveryPerson/DeliveryPersonLogin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontendUpdated/src/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontendUpdated/src/pages/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontendUpdated/src/pages/User/UserLogin.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontendUpdated/src/pages/User/UserLogin.js" afterDir="false" />
-
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controllers/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/DonationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/DonationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/PasswordResetTokenRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/PasswordResetTokenRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/service/DeliveryPersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/service/DeliveryPersonService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/controllers/PasswordResetController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/controllers/PasswordResetController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontendUpdated/src/pages/Admin/AdminLogin.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontendUpdated/src/pages/Admin/AdminLogin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontendUpdated/src/pages/DeliveryPerson/DeliveryPersonDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontendUpdated/src/pages/DeliveryPerson/DeliveryPersonDashboard.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,26 +57,6 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/samayochita/IIITB/VeryGratefulPlate/demo&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.completion&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RequestMappingsPanelOrder0": "0",
@@ -96,7 +67,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Spring Boot.DemoApplication.executor": "Run",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Riya",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/samayochita/IIITB/VeryGratefulPlate/demo",
     "node.js.detected.package.eslint": "true",
@@ -109,7 +80,6 @@
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "advanced.settings",
     "vue.rearranger.settings.migration": "true"
-
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -130,15 +100,6 @@
     <configuration name="generated-requests | #15" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="15" requestIdentifier="#15" runType="Run single request">
       <method v="2" />
     </configuration>
-
-    <configuration name="generated-requests | #33" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="33" requestIdentifier="#33" runType="Run single request">
-      <method v="2" />
-    </configuration>
-    <configuration name="generated-requests | #35" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="35" requestIdentifier="#35" runType="Run single request">
-      <method v="2" />
-    </configuration>
-    <configuration name="generated-requests | #36" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="36" requestIdentifier="#36" runType="Run single request">
-
     <configuration name="generated-requests | #30" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="30" requestIdentifier="#30" runType="Run single request">
       <method v="2" />
     </configuration>
@@ -146,7 +107,15 @@
       <method v="2" />
     </configuration>
     <configuration name="generated-requests | #33" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="33" requestIdentifier="#33" runType="Run single request">
-
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests | #33" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="33" requestIdentifier="#33" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests | #35" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="35" requestIdentifier="#35" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests | #36" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="36" requestIdentifier="#36" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
@@ -158,19 +127,16 @@
     </configuration>
     <recent_temporary>
       <list>
-
         <item itemvalue="HTTP Request.generated-requests | #36" />
         <item itemvalue="HTTP Request.generated-requests | #35" />
         <item itemvalue="HTTP Request.generated-requests | #15" />
         <item itemvalue="HTTP Request.generated-requests | #14" />
         <item itemvalue="HTTP Request.generated-requests | #33" />
-
         <item itemvalue="HTTP Request.generated-requests | #33" />
         <item itemvalue="HTTP Request.generated-requests | #32" />
         <item itemvalue="HTTP Request.generated-requests | #15" />
         <item itemvalue="HTTP Request.generated-requests | #14" />
         <item itemvalue="HTTP Request.generated-requests | #30" />
-
       </list>
     </recent_temporary>
   </component>
@@ -202,15 +168,12 @@
       <workItem from="1714141152224" duration="5322000" />
       <workItem from="1714193629574" duration="36281000" />
       <workItem from="1714277341970" duration="75000" />
-
       <workItem from="1714566471079" duration="18341000" />
       <workItem from="1714592762558" duration="77000" />
       <workItem from="1714627179729" duration="3680000" />
       <workItem from="1714649830315" duration="1124000" />
-
       <workItem from="1714566471079" duration="10499000" />
       <workItem from="1715439453247" duration="13196000" />
-
     </task>
     <servers />
   </component>

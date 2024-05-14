@@ -13,40 +13,47 @@ export const DeliveryPersonDashboard = () => {
   const [donationStatus, setDonationStatus] = useState(userData?.status);
   const navigate = useNavigate(); 
 
-  console.log(userData.id);
+  
 
   useEffect(() => {
-    // Fetch all donations associated with the delivery person's userId
-    const fetchUserDonations = async () => {
+    // Fetch the donation ID associated with the delivery person
+    const fetchDonationId = async () => {
       try {
-        const response = await axios.get(`${BASE_URL}/api/donations/userdonations?userId=${userData.id}&userType=DELIVERY_PERSON`);
-        // Assuming the first donation is the most recent one
-        if (response.data.length > 0) {
-          setDonationId(response.data[0].donationId);
+        const response = await axios.get(`${BASE_URL}/api/deliveryperson/${userData.id}/pendingdonations`);
+        if (response.data && response.data.length > 0) {
+          setDonationId(response.data[0].id);
+          console.log(donationId);
         }
       } catch (error) {
-        console.error('Error fetching donation details:', error);
-        // Handle error
+        console.error("Error fetching donation ID:", error);
       }
     };
+    if (userData?.id) {
+      fetchDonationId();
+    }
+  }, [userData?.id]);
 
-    fetchUserDonations();
-  }, [userData]);
-
+  
 
   const handleDonationStatusChange = async () => {
     try {
       if (donationId) {
         const newStatus = donationStatus === "pickedup" ? "delivered" : "pickedup";
-        await axios.put(`${BASE_URL}/api/donations/${donationId}/${newStatus}`);
+        await axios.put(`${BASE_URL}/api/deliveryperson/${userData.id}/${newStatus}`);
         setDonationStatus(newStatus);
       } else {
-        console.error('Donation details not found for the delivery person');
+        console.error("Donation details not found for the delivery person");
       }
     } catch (error) {
-      console.error('Error updating donation status:', error);
+      console.error("Error updating donation status:", error);
     }
   };
+
+
+
+
+
+
   const handleLogout = async () => {
     try {
       // Call backend logout endpoint
@@ -88,7 +95,7 @@ export const DeliveryPersonDashboard = () => {
           )}
         </div>
         <button onClick={handleDonationStatusChange}>
-            {donationStatus === "pickedup" ? "Mark as Delivered" : "Mark as Picked Up"}
+            {donationStatus === "pending" ? "pickedup" : "delivered"}
         </button>
         <button onClick={handleLogout}>Logout</button>
       </div>

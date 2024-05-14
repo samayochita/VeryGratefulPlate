@@ -10,10 +10,7 @@ import java.util.List;
 @Repository
 public interface DonationRepository extends JpaRepository<Donation, Integer> {
 
-<<<<<<< HEAD
-=======
 
->>>>>>> Sam
     // Method to find donations by delivery person id and donation status
     List<Donation> findByDeliveryPersonIdAndDonationStatus(Long deliveryPersonId, String donationStatus);
 

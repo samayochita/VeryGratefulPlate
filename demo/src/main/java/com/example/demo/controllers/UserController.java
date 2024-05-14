@@ -114,14 +114,14 @@ public class UserController {
     @PostMapping(path = "/loginadmin")
     public ResponseEntity<Object> loginAdmin(@RequestBody UserDTO userDTO) {
         try {
-            LOGGER.info("Logging in user...");
+            LOGGER.info("Logging in admin...");
 
             // Check if user with the provided email exists
             User existingUser = userService.findByEmailId(userDTO.getEmailId());
 
             if (existingUser == null) {
-                LOGGER.error("User not found");
-                return ResponseEntity.status(HttpStatus.NOT_FOUND).body("User not found");
+                LOGGER.error("Admin not found");
+                return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Admin not found");
             }
 
             // Check if the provided password matches the user's password
@@ -142,8 +142,8 @@ public class UserController {
 
             // If user type is not "ADMIN", return unauthorized
             else {
-                LOGGER.error("User login failed: Invalid user type");
-                return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("User login failed: Invalid user type");
+                LOGGER.error("Admin login failed: Invalid user type");
+                return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Admin login failed: Invalid user type");
             }
         } catch (Exception ex) {
             LOGGER.error("Login failed", ex);

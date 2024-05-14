@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import { BASE_URL } from '../../services/helper';
+import axios from 'axios';
 
 import './AdminLogin.css'; // Import the CSS file
 
@@ -16,9 +18,37 @@ export const AdminLogin = () => {
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = (data) => {
-    console.log(data);
-    // You can implement further logic such as submitting the form data to the server for authentication
+  const onSubmit = async (data) => {
+    try {
+      // Add the userType to the data
+      data.userType = "ADMIN";
+
+      // Make the POST request to the /loginadmin endpoint
+      const response = await fetch('http://localhost:9191/api/users/loginadmin', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      // const response = await axios.post(`${BASE_URL}/api/users/loginadmin`, data);
+      // console.log(response);
+
+      const result = await response.json();
+
+      if (response.ok) {
+        // Handle successful login
+        console.log('Login successful:', result);
+        
+      } else {
+        // Handle login failure
+        console.error('Login failed:', result);
+        alert(result);
+      }
+    } catch (error) {
+      console.error('An error occurred:', error);
+    }
   };
 
   return (
