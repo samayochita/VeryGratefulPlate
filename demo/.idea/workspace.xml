@@ -5,20 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4bb3aa2d-04e8-47a3-91e9-a5460ea8a306" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5c1bfc07-4e96-4690-8e52-d5a988411c0a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5c1bfc07-4e96-4690-8e52-d5a988411c0a.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b131357f-0961-4b8e-8ea0-bc4d17c672ab.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b131357f-0961-4b8e-8ea0-bc4d17c672ab.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appLog.log" beforeDir="false" afterPath="$PROJECT_DIR$/appLog.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/DonationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/DonationRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/PasswordResetTokenRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/PasswordResetTokenRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/service/DeliveryPersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/service/DeliveryPersonService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/controllers/PasswordResetController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/controllers/PasswordResetController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontendUpdated/src/pages/Admin/AdminLogin.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontendUpdated/src/pages/Admin/AdminLogin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontendUpdated/src/pages/DeliveryPerson/DeliveryPersonDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontendUpdated/src/pages/DeliveryPerson/DeliveryPersonDashboard.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

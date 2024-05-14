@@ -59,9 +59,9 @@ export const AdminLogin = () => {
         <div className="admin-login-form">
           <h2>Admin Login</h2>
           <form onSubmit={handleSubmit(onSubmit)}>
-            <label htmlFor="email">Email:</label>
-            <input type="email" id="email" placeholder="Email..." {...register("email")} />
-            <p>{errors.email?.message}</p>
+            <label htmlFor="emailId">Email:</label>
+            <input type="emailId" id="emailId" placeholder="Email..." {...register("emailId")} />
+            <p>{errors.emailId?.message}</p>
 
             <label htmlFor="password">Password:</label>
             <input type="password" id="password" placeholder="Password..." {...register("password")} />
