@@ -36,4 +36,8 @@
 -[2m2024-05-14 11:33:12.168[0;39m [32m- INFO[0;39m [35m621930[0;39m [2m---[0;39m [2m[nio-9191-exec-2][0;39m [36mc.e.demo.controllers.UserController     [0;39m [2m:[0;39m Admin login successful
 -[2m2024-05-14 11:47:50.006[0;39m [32m- INFO[0;39m [35m621930[0;39m [2m---[0;39m [2m[nio-9191-exec-4][0;39m [36mc.e.demo.controllers.UserController     [0;39m [2m:[0;39m Logging in admin...
 -[2m2024-05-14 11:47:50.011[0;39m [32m- INFO[0;39m [35m621930[0;39m [2m---[0;39m [2m[nio-9191-exec-4][0;39m [36mc.e.demo.controllers.UserController     [0;39m [2m:[0;39m Admin login successful
+-[2m2024-05-14 14:48:11.784[0;39m [32m- INFO[0;39m [35m621930[0;39m [2m---[0;39m [2m[nio-9191-exec-4][0;39m [36mc.example.demo.service.DonationService  [0;39m [2m:[0;39m Updating donation with ID: 2
+-[2m2024-05-14 14:48:11.824[0;39m [32m- INFO[0;39m [35m621930[0;39m [2m---[0;39m [2m[nio-9191-exec-4][0;39m [36mc.example.demo.service.DonationService  [0;39m [2m:[0;39m Donation updated successfully.
+-[2m2024-05-14 14:48:16.268[0;39m [32m- INFO[0;39m [35m621930[0;39m [2m---[0;39m [2m[nio-9191-exec-5][0;39m [36mc.example.demo.service.DonationService  [0;39m [2m:[0;39m Updating donation with ID: 2
+-[2m2024-05-14 14:48:16.281[0;39m [32m- INFO[0;39m [35m621930[0;39m [2m---[0;39m [2m[nio-9191-exec-5][0;39m [36mc.example.demo.service.DonationService  [0;39m [2m:[0;39m Donation updated successfully.
 -
