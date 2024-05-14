@@ -24,6 +24,8 @@ export const DeliveryPersonDashboard = () => {
           const newDonationId = response.data[0].donationId; // Access donationId correctly
           setDonationId(newDonationId);
           console.log("Donation ID:", newDonationId);
+          const newDonationStatus = response.data[0].donationStatus;
+          setDonationStatus(newDonationStatus);
         }
       } catch (error) {
         console.error("Error fetching donation ID:", error);
@@ -36,12 +38,22 @@ export const DeliveryPersonDashboard = () => {
 
   
 
+
   const handleDonationStatusChange = async () => {
     try {
       if (donationId) {
-        const newStatus = donationStatus === "pending" ? "pickedup" : "delivered";
-        await axios.put(`${BASE_URL}/api/deliveryperson/${userData.id}/donation/${donationId}/status`, { status: newStatus });
-        setDonationStatus(newStatus);
+        // const newStatus = donationStatus === "pending" ? "pickedup" : "delivered";
+        // await axios.put(`${BASE_URL}/api/deliveryperson/${userData.id}/${newStatus}`);
+        // setDonationStatus(newStatus);
+
+        if(donationStatus === "pending"){
+          await axios.put(`${BASE_URL}/api/deliveryperson/${userData.id}/pickedup`);
+          setDonationStatus("pickedup");
+        }
+        else{
+          await axios.put(`${BASE_URL}/api/deliveryperson/${userData.id}/delivered`);
+          setDonationStatus("delivered");
+        }
       } else {
         console.error("Donation details not found for the delivery person");
       }
