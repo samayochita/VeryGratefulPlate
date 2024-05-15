@@ -63,6 +63,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>GratefulPlate</finalName>
 	</build>
 
 </project>
