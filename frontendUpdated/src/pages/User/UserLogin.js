@@ -26,13 +26,23 @@ export const UserLogin = () => {
 
   const onSubmit = async (data) => {
     try {
-      const response = await axios.post(`${BASE_URL}/api/users/login`, data);
+      data.userType = "USER";
+      // const response = await axios.post(`${BASE_URL}/api/users/loginuser`, data);
+      const response = await fetch('http://localhost:9191/api/users/loginuser', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
       console.log(response);
-      if (response.status === 200) {
-        console.log("Login successful:", response.data);
+      if (response.ok) {
+        console.log("Login successful:", result);
 
         // Store user ID in localStorage
-        localStorage.setItem('userId', parseInt(response.data.userId));
+        localStorage.setItem('userId', parseInt(result.userId));
 
         navigate("/donate-food-form");
       }
@@ -44,18 +54,18 @@ export const UserLogin = () => {
 
   const handleForgotPassword = async() => {
     
-      try {
-        const emailId = prompt("Enter your email address:");
-        if (emailId) {
-          await axios.post(`${BASE_URL}/forgotpassword`, { emailId });
-          setForgotPasswordMessage("Password reset token sent successfully. Check your email.");
-          // Redirect to the ResetPassword component with the email address
-          navigate(`/user-reset-password/${emailId}`);
-        }
-      } catch (error) {
-        console.error("Forgot password failed:", error);
-        setForgotPasswordMessage("Failed to send password reset token. Please try again later.");
-      }
+      // try {
+      //   const emailId = prompt("Enter your email address:");
+      //   if (emailId) {
+      //     await axios.post(`${BASE_URL}/forgotpassword`, { emailId });
+      //     setForgotPasswordMessage("Password reset token sent successfully. Check your email.");
+      //     // Redirect to the ResetPassword component with the email address
+      //     navigate(`/user-reset-password/${emailId}`);
+      //   }
+      // } catch (error) {
+      //   console.error("Forgot password failed:", error);
+      //   setForgotPasswordMessage("Failed to send password reset token. Please try again later.");
+      // }
     
     
   };

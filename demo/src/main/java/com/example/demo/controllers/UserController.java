@@ -94,7 +94,7 @@ public class UserController {
                 return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Incorrect password");
             }
 
-            // Check if user type is "USER"
+//             Check if user type is "USER"
             if (!userDTO.getUserType().equals("USER")) {
                 LOGGER.error("User login failed: Invalid user type");
                 return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("User login failed: Invalid user type");

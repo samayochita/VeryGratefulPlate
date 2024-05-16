@@ -31,7 +31,7 @@ export const DeliveryPersonRegister = () => {
   const onSubmit = async (data) => {
     console.log("Form submitted with data:", data); 
     try {
-      const response = await axios.post(`${BASE_URL}/api/deliverypersons/register`, data);
+      const response = await axios.post(`${BASE_URL}/api/deliveryperson/register`, data);
       console.log(response);
       if (response.status === 200) {
         console.log("Account created successfully:", data);
