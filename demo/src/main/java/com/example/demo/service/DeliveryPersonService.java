@@ -1,6 +1,7 @@
 package com.example.demo.service;
 
 import com.example.demo.model.DeliveryPerson;
+import com.example.demo.model.DeliveryPersonStatus;
 import com.example.demo.model.Donation;
 import com.example.demo.repository.DeliveryPersonRepository;
 import com.example.demo.repository.DonationRepository;
@@ -37,6 +38,14 @@ public class DeliveryPersonService {
     }
 
     public void save(DeliveryPerson deliveryPerson) {
+        deliveryPersonRepository.save(deliveryPerson);
+    }
+
+    public void updateDeliveryPersonStatusToOnDutyFree(DeliveryPerson deliveryPerson) {
+        if (deliveryPerson == null) {
+            throw new IllegalArgumentException("Delivery person cannot be null");
+        }
+        deliveryPerson.setStatus(DeliveryPersonStatus.ON_DUTY_FREE);
         deliveryPersonRepository.save(deliveryPerson);
     }
 }
