@@ -6,32 +6,49 @@ import { BASE_URL } from '../../services/helper';
 
 export const ResetPassword = () => {
   const { emailId } = useParams();
-  const [newPassword, setNewPassword] = useState('');
-  const [resetMessage, setResetMessage] = useState('');
+  const [token, setToken] = useState("");
+  const [newPassword, setNewPassword] = useState("");
+  const [message, setMessage] = useState("");
 
-  const handleSubmit = async (e) => {
+  const handleResetPassword = async (e) => {
     e.preventDefault();
     try {
-      await axios.post(`${BASE_URL}/resetpassword`, { emailId, newPassword });
-      setResetMessage('Password reset successful. You can now login with your new password.');
+      const response = await axios.post(`${BASE_URL}/resetpassword/user`, {
+        token,
+        user:{
+          emailId
+        },
+        newPassword,
+      });
+      setMessage(response.data);
     } catch (error) {
-      console.error('Password reset failed:', error);
-      setResetMessage('Failed to reset password. Please try again later.');
+      setMessage("Failed to reset password. Please try again.");
     }
   };
 
   return (
     <div className={styles.container}>
       <h2>Reset Password</h2>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="password">Enter your new password:</label>
-        <input type="password" id="password" value={newPassword} onChange={(e) => setNewPassword(e.target.value)} required />
+      <form onSubmit={handleResetPassword}>
+        <label htmlFor="token">Token:</label>
+        <input
+          type="text"
+          id="token"
+          value={token}
+          onChange={(e) => setToken(e.target.value)}
+          required
+        />
+        <label htmlFor="newPassword">New Password:</label>
+        <input
+          type="password"
+          id="newPassword"
+          value={newPassword}
+          onChange={(e) => setNewPassword(e.target.value)}
+          required
+        />
         <button type="submit">Reset Password</button>
       </form>
-      {resetMessage && <p className={styles.reset_message}>{resetMessage}</p>}
-      <p className={styles.back_to_login}>
-        Remember your password? <Link to="/user-login">Back to Login</Link>
-      </p>
+      {message && <p className={styles.message}>{message}</p>}
     </div>
   );
 };
