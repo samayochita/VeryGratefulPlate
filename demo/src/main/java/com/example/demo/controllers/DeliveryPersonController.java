@@ -108,6 +108,8 @@ public class DeliveryPersonController {
         Donation pickedupDonation = pickedupDonations.get(0);
         pickedupDonation.setDonationStatus("delivered");
         donationService.updateDonation(pickedupDonation);
+        // Update delivery person status to ON_DUTY_FREE
+        deliveryPersonService.updateDeliveryPersonStatusToOnDutyFree(deliveryPerson);
 
         return ResponseEntity.ok().body("Donation status updated to delivered");
     }
