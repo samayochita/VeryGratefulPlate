@@ -60,7 +60,7 @@ export const UserLogin = () => {
           await axios.post(`${BASE_URL}/forgotpassword/user?emailId=${encodeURIComponent(emailId)}`);
           setForgotPasswordMessage("Password reset token sent successfully. Check your email.");
           // Redirect to the ResetPassword component with the email address
-          navigate(`/user-reset-password`);
+          navigate(`/user-reset-password/${emailId}`);
         }
       } catch (error) {
         console.error("Forgot password failed:", error);
