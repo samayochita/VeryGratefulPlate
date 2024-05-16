@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import {Home} from './pages/Home';
 import {WhatWeDo} from './pages/WhatWeDo/WhatWeDo';
@@ -19,6 +19,7 @@ import {DeliveryPersonOrders} from './pages/DeliveryPerson/DeliveryPersonOrders'
 import {OurTeam} from './pages/OurTeam/OurTeam';
 import { DeliveryPersonRegister } from './pages/DeliveryPerson/DeliveryPersonRegister';
 import { ResetPassword } from './pages/User/ResetPassword';
+import { DeliveryResetPassword } from './pages/DeliveryPerson/DeliveryResetPassword';
 
 
 function App() {
@@ -47,7 +48,7 @@ function App() {
           <Route path="/delivery-person-pickup" element={<DeliveryPersonPickup />} />
           <Route path="/our-team" element={<OurTeam/>} />
           <Route path="/user-reset-password/:emailId" element={<ResetPassword />}/>
-          
+          <Route path="/delivery-reset-password/:{emailId}" element={<DeliveryResetPassword/>}/>
 
           <Route path="*" element={<h1>Page Not Found</h1>} />
         </Routes>
