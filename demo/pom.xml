@@ -53,8 +53,10 @@
 	<build>
 		<plugins>
 			<plugin>
+				<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-maven-plugin -->
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>3.2.1</version>
 				<configuration>
 					<excludes>
 						<exclude>
