@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import styles from './ResetPassword.module.css';
 import axios from 'axios';
 import { BASE_URL } from '../../services/helper';
 
 export const ResetPassword = () => {
+  const navigate = useNavigate();
   const { emailId } = useParams();
   const [token, setToken] = useState("");
   const [newPassword, setNewPassword] = useState("");
@@ -24,6 +25,10 @@ export const ResetPassword = () => {
     } catch (error) {
       setMessage("Failed to reset password. Please try again.");
     }
+  };
+
+  const handleLoginRedirect = () => {
+    navigate('/user-login');
   };
 
   return (
@@ -49,6 +54,9 @@ export const ResetPassword = () => {
         <button type="submit">Reset Password</button>
       </form>
       {message && <p className={styles.message}>{message}</p>}
+      <button onClick={handleLoginRedirect} className={styles.loginButton}>
+          Go to Login
+      </button>
     </div>
   );
 };

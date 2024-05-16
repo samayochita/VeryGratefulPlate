@@ -48,7 +48,7 @@ function App() {
           <Route path="/delivery-person-pickup" element={<DeliveryPersonPickup />} />
           <Route path="/our-team" element={<OurTeam/>} />
           <Route path="/user-reset-password/:emailId" element={<ResetPassword />}/>
-          <Route path="/delivery-reset-password/:{emailId}" element={<DeliveryResetPassword/>}/>
+          <Route path="/delivery-reset-password/:emailId" element={<DeliveryResetPassword/>}/>
 
           <Route path="*" element={<h1>Page Not Found</h1>} />
         </Routes>
