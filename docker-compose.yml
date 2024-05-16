@@ -1,0 +1,58 @@
+version: "3"
+services:
+  mysqlservice:
+    image: mysql:latest
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: 0553
+      MYSQL_DATABASE: spedemo3
+      MYSQL_USER : root
+      MYSQL_PASSWORD : 0553
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      timeout: 60s
+      retries: 10
+    networks:
+      - app_network
+
+  frontend:
+    build:
+      dockerfile: Dockerfile
+      context: ./frontendUpdated
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    networks:
+      - app_network
+
+  backend:
+    restart: always
+    build:
+      dockerfile: Dockerfile
+      context: ./demo
+    ports:
+      - "9192:9191"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysqlservice:3306/spedemo3?autoReconnect=true&useSSL=false
+
+    #      MYSQL_ROOT_PASSWORD: 0553
+#      MYSQL_PASSWORD: 0553
+#      MYSQL_DATABASE: spedemo3
+#      MYSQL_URL: 3306
+    depends_on:
+      mysqlservice:
+        condition: service_healthy
+    networks:
+      - app_network
+#    restart: always
+
+networks:
+  app_network:
+    driver: bridge
+
+volumes:
+  mysql_data:
