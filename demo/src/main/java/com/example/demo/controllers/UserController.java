@@ -154,7 +154,7 @@ public class UserController {
 
 
     @PostMapping("/logout")
-    public ResponseEntity<String> logout(HttpServletRequest request, HttpServletResponse response) {
+    public ResponseEntity<String> logout(HttpServletRequest request) {
         try {
             LOGGER.info("Logging out user...");
 
