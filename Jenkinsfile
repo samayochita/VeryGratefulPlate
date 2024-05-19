@@ -67,8 +67,8 @@ pipeline {
 
                          sh '/Users/samayochita/.local/bin/ansible-playbook -i inventory playbook.yml'
 
-                          }
-                  }
+                         }
+                   }
         }
     }
 
