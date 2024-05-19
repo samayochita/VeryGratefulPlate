@@ -7,8 +7,8 @@ pipeline {
     environment {
 
         GITHUB_REPO_URL = 'https://github.com/samayochita/VeryGratefulPlate.git'
-        frontendRepositoryName = "your-dockerhub-username/verygratefulplate-frontend"
-        backendRepositoryName = "your-dockerhub-username/verygratefulplate-backend"
+        frontendRepositoryName = "samayochita/verygratefulplate-frontend"
+        backendRepositoryName = "samayochita/verygratefulplate-backend"
         tag = "latest"
         frontendImage = ""
         backendImage = ""
