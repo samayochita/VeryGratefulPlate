@@ -1,4 +1,3 @@
----
 - name: Pull Docker Images from Docker Hub
   hosts: localhost
   become: false
