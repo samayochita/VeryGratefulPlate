@@ -13,6 +13,7 @@ hs_err_pid*
 replay_pid*
 java/build/**
 demo/java/build/**
+demo/target/
 
 ##############################
 ## Maven

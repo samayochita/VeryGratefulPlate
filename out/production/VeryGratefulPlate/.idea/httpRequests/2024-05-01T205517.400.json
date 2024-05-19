@@ -1,0 +1,6 @@
+{
+  "timestamp": "2024-05-01T15:25:17.790+00:00",
+  "status": 400,
+  "error": "Bad Request",
+  "path": "/api/donations/userdonations"
+}
