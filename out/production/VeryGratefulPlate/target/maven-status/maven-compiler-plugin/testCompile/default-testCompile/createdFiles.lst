@@ -1,0 +1,4 @@
+com/example/demo/repository/DeliveryPersonRepositoryTest.class
+com/example/demo/service/DeliveryPersonServiceTest.class
+com/example/demo/DemoApplicationTests.class
+com/example/demo/controller/DeliveryPersonControllerTest.class
