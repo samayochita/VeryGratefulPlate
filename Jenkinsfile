@@ -6,7 +6,7 @@ pipeline {
 
     environment {
 
-        GITHUB_REPO_URL = 'https://github.com/yourusername/VeryGratefulPlate.git'
+        GITHUB_REPO_URL = 'https://github.com/samayochita/VeryGratefulPlate.git'
         frontendRepositoryName = "your-dockerhub-username/verygratefulplate-frontend"
         backendRepositoryName = "your-dockerhub-username/verygratefulplate-backend"
         tag = "latest"
