@@ -60,10 +60,19 @@ pipeline {
                 }
             }
         }
+         stage('Kill process on port 3306') {
+                    steps {
+                        script {
+                                sshagent(['your-ssh-credentials-id']) {
+                                sh 'ssh -o StrictHostKeyChecking=no user@localhost sudo kill $(sudo lsof -t -i:3306)'
+                            }
+                        }
+                    }
+                }
         stage ("Run Ansible Playbook") {
                     steps {
                         script {
-                            sh 'sudo kill `sudo lsof -t -i:3306`'
+
                             sh '/Users/samayochita/.local/bin/ansible-playbook -i inventory playbook.yml'
                             // sh '/bin/bash -c "/opt/homebrew/bin/sshpass -p 0553 /opt/homebrew/bin/ansible-playbook -i inventory playbook.yml"'
 
