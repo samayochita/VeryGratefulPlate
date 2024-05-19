@@ -1,6 +1,7 @@
 pipeline {
     agent any
     environment {
+        GITHUB_REPO_URL = 'https://github.com/yourusername/VeryGratefulPlate.git'
         frontendRepositoryName = "your-dockerhub-username/verygratefulplate-frontend"
         backendRepositoryName = "your-dockerhub-username/verygratefulplate-backend"
         tag = "latest"
@@ -11,7 +12,7 @@ pipeline {
         stage('Fetch code from GitHub') {
             steps {
                 git branch: 'main',
-                url: 'https://github.com/yourusername/VeryGratefulPlate'
+                url: "${GITHUB_REPO_URL}"
             }
         }
         stage('Build backend code using Maven') {
