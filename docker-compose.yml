@@ -31,7 +31,7 @@ services:
   mysqlservice:
     image: mysql
     ports:
-      - "3306:3306"
+      - "3307:3306"
     environment:
       MYSQL_ROOT_PASSWORD: 0553
       MYSQL_DATABASE: spedemo3
