@@ -1,0 +1,31 @@
+---
+- name: Pull Docker Images from Docker Hub
+  hosts: localhost
+  become: false
+  connection: local
+  tasks:
+    - name: Pull Docker Image of Backend
+      docker_image:
+        name: "samayochita/verygratefulplate-backend"
+        source: pull
+      register: docker_pull_backend_result
+
+    - name: Display Docker Pull Result of Backend
+      debug:
+        var: docker_pull_backend_result
+
+    - name: Pull Docker Image of Frontend
+      docker_image:
+        name: "samayochita/verygratefulplate-frontend"
+        source: pull
+      register: docker_pull_frontend_result
+
+    - name: Display Docker Pull Result of Frontend
+      debug:
+        var: docker_pull_frontend_result
+
+    - name: Removing container if already exists
+      command: docker-compose down
+
+    - name: Running container
+      command: docker-compose up --build -d
