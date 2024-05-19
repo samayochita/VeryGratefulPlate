@@ -64,7 +64,7 @@ pipeline {
                     steps {
                         script {
 
-                            sh '/bin/bash -c "/opt/homebrew/bin/sshpass -p 0553 /opt/homebrew/bin/ansible-playbook -i inventory playbook.yml"'
+                            sh 'ansible-playbook -i inventory playbook.yml'
 
                             }
                     }
