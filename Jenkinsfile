@@ -28,6 +28,13 @@ pipeline {
                 }
             }
         }
+        stage ('Unit Tests using Maven') {
+                steps {
+                    script {
+                        sh 'mvn test'
+                    }
+                }
+        }
         stage('Create backend Docker image') {
             steps {
                 script {
