@@ -30,7 +30,9 @@ pipeline {
         stage ('Unit Tests using Maven') {
                 steps {
                     script {
-                        sh 'mvn test'
+                           dir('demo') {
+                                 sh 'mvn test'
+                           }
                     }
                 }
         }
