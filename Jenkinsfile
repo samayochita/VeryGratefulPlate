@@ -27,7 +27,7 @@ pipeline {
                 }
             }
         }
-        stage ('Unit Tests using Maven') {
+        stage ('Run unit tests using Maven') {
                 steps {
                     script {
                            dir('demo') {
