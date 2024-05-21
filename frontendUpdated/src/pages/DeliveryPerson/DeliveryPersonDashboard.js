@@ -104,6 +104,9 @@ export const DeliveryPersonDashboard = () => {
               <p>
                 <strong>STATUS:</strong> {userData.status}
               </p>
+              <p>
+                <strong>ADDRESS: 26/C IIIT-Bangalore</strong>
+              </p>
             </div>
           )}
         </div>

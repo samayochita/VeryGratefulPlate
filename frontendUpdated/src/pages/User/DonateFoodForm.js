@@ -11,6 +11,7 @@ import { useNavigate } from 'react-router-dom';
 export const DonateFoodForm = () => {
   const navigate = useNavigate();
   const [userId, setUserId] = useState("");
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   useEffect(() => {
     // Fetch user ID from localStorage
@@ -46,6 +47,7 @@ export const DonateFoodForm = () => {
       const response = await axios.post(`${BASE_URL}/api/donations/add`, donationData);
       console.log(response.data);
       // Handle success
+      setIsSubmitted(true); // Set submission status to true
     } catch (error) {
       console.error('Error:', error);
       // Handle error
@@ -72,6 +74,12 @@ export const DonateFoodForm = () => {
     <div className="register-form">
         <h1>Donate <span>Food</span></h1>
         <p>It's not how much we give, but how much love we put into giving!</p>
+        {isSubmitted ? (
+          <div>
+            <h1>Submitted successfully!</h1>
+            <button type="button" onClick={handleLogout}>Logout</button>
+          </div>
+        ): (
 
         <form onSubmit={handleSubmit}>
         <input type="text" name="donorName" placeholder="Your Name" id="donorName" required />
@@ -93,7 +101,7 @@ export const DonateFoodForm = () => {
 
         <input type="submit" value="Submit" className="submitbtn" />
         <button type="button" onClick={handleLogout}>Logout</button>
-        </form>
+        </form>)}
     </div>
     </section>
 
