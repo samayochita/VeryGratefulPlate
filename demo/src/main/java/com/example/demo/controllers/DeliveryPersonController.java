@@ -10,6 +10,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import jakarta.servlet.http.HttpServletRequest;
 import java.util.List;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @RestController
 @RequestMapping("/api/deliveryperson")
@@ -17,6 +19,8 @@ public class DeliveryPersonController {
 
     private final DeliveryPersonService deliveryPersonService;
     private final DonationService donationService;
+    private static final Logger logger = LoggerFactory.getLogger(DeliveryPersonController.class);
+
 
     @Autowired
     public DeliveryPersonController(DeliveryPersonService deliveryPersonService, DonationService donationService) {
@@ -112,10 +116,21 @@ public class DeliveryPersonController {
     }
     @GetMapping("/{deliveryPersonId}/pendingdonations")
     public ResponseEntity<List<Donation>> getPendingDonationsForDeliveryPerson(@PathVariable("deliveryPersonId") Long deliveryPersonId) {
-        List<Donation> pendingDonations = deliveryPersonService.getPendingDonationsForDeliveryPerson(deliveryPersonId);
+        logger.info("Received request to get pending donations for delivery person with ID: {}", deliveryPersonId);
+
+        List<Donation> pendingDonations = null;
+        try {
+            pendingDonations = deliveryPersonService.getPendingDonationsForDeliveryPerson(deliveryPersonId);
+        } catch (Exception e) {
+            logger.error("Error occurred while fetching pending donations for delivery person with ID: {}", deliveryPersonId, e);
+            return ResponseEntity.status(500).build();
+        }
+
         if (pendingDonations != null) {
+            logger.info("Pending donations found for delivery person with ID: {}", deliveryPersonId);
             return ResponseEntity.ok(pendingDonations);
         } else {
+            logger.warn("No pending donations found for delivery person with ID: {}", deliveryPersonId);
             return ResponseEntity.notFound().build();
         }
     }
